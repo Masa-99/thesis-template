@@ -1,9 +1,0 @@
-\chapter{Fazit und Ausblick}\label{ch:summary}
-
-Klärung der wissenschaftlichen Frage, Bezug auf Einleitung, Future Work 
-Kritische Hinterfragung: Moderne Webanwendungen haben mittlerweile viele der Funktionen inbegrif-fen und es bedarf deshalb keine zusätzlichen Entwicklungsaufwand. Der Begriff PWA ist deshalb eher als Buzzword zu sehen, als der Gedanke des „nativen“ Webs entstanden ist, bezeichnet aber mittlerweile „nur“ Webanwendungen.
-%CLI bringt zu viele Abhängigkeiten.
-%Windows Linux Mac Unterstützung
-%Wie sicher sind PWAs im Vergleich zu Native Apps?
-Für anknüpfende Arbeiten könnten die Analyse von PWAs und React Native Apps intensiviert werden, indem genauer auf die verschiedenen Funktionalitäten eingegangen wird, die mit diesen beiden Vorge-hensweisen umsetzbar sind. Beispiele hierfür für die Weiterentwicklung bei der Webanwendung wären die Einbindung der Background Sync API, Payment Request API oder Web Share Target API.
-%Weiterentwicklung der App, welche Funktionen? 
