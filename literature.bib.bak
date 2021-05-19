@@ -1,0 +1,211 @@
+% This file was created with Citavi 6.8.0.0
+
+@misc{.,
+ title = {Mobile and Desktop},
+ url = {https://2020.stateofjs.com/en-US/technologies/mobile-desktop/}
+}
+
+
+@book{Boduch.2020,
+ abstract = {Get up to speed with React, React Native, GraphQL and Apollo for building cross-platform native apps with the help of practical examples Key Features Covers the latest features of React such as Hooks, Suspense, NativeBase, and Apollo in this updated third edition Get to grips with the React architecture for writing easy-to-manage web and mobile applications Understand GraphQL and Apollo for building a scalable backend for your cross-platform apps Book Description React and React Native, Facebook's innovative User Interface (UI) libraries, are designed to help you build robust cross-platform web and mobile applications. This updated third edition is improved and updated to cover the latest version of React. The book particularly focuses on the latest developments in the React ecosystem, such as modern Hook implementations, code splitting using lazy components and Suspense, user interface framework components using Material-UI, and Apollo. In terms of React Native, the book has been updated to version 0.62 and demonstrates how to apply native UI components for your existing mobile apps using NativeBase. You will begin by learning about the essential building blocks of React components. Next, you'll progress to working with higher-level functionalities in application development, before putting this knowledge to use by developing user interface components for the web and for native platforms. In the concluding chapters, you'll learn how to bring your application together with a robust data architecture. By the end of this book, you'll be able to build React applications for the web and React Native applications for multiple mobile platforms. What you will learn Delve into the React architecture, component properties, state, and context Get to grips with React Hooks for handling functions and components Implement code splitting in React using lazy components and Suspense Build robust user interfaces for mobile and desktop apps using Material-UI Write shared components for Android and iOS mobile apps using React Native Simplify layout design for React Native apps using NativeBase Write GraphQL schemas to power web and mobile apps Implement web and mobile components that are driven by Apollo Who this book is for This book is for any JavaScript developer who wants to start learning how to use Facebook's UI libraries, React and React Native, for mobile and web application development. Although no prior knowledge of React is needed, working knowledge o...},
+ author = {Boduch, Adam and Derks, Roy},
+ year = {2020},
+ title = {React and React Native - Third Edition},
+ address = {[Erscheinungsort nicht ermittelbar] and Boston, MA},
+ edition = {3rd edition},
+ publisher = {{Packt Publishing} and Safari},
+ isbn = {9781839211140},
+ file = {http://www.worldcat.org/oclc/1192535370}
+}
+
+
+@proceedings{Bui.2018,
+ year = {2018},
+ title = {Proceedings of the 51st Hawaii International Conference on System Sciences},
+ publisher = {{Hawaii International Conference on System Sciences}},
+ series = {Proceedings of the Annual Hawaii International Conference on System Sciences},
+ editor = {Bui, Tung}
+}
+
+
+@book{Domes.2017,
+ author = {Domes, Scott},
+ year = {2017},
+ title = {Progressive web apps with React: Create lightning fast web apps with native power using React and Firebase},
+ url = {http://proquest.tech.safaribooksonline.de/9781788297554},
+ address = {Birmingham, UK},
+ publisher = {{Packt Publishing}},
+ isbn = {9781788297554}
+}
+
+
+@misc{Facebook.,
+ author = {Facebook},
+ title = {Core Components and Native Components},
+ url = {https://reactnative.dev/docs/intro-react-native-components}
+}
+
+
+@misc{Facebook.b,
+ author = {Facebook},
+ title = {Ejecting to ExpoKit},
+ url = {https://docs.expo.io/expokit/eject/},
+ address = {Online}
+}
+
+
+@misc{Facebook.c,
+ author = {Facebook},
+ title = {Introducing Hooks},
+ url = {https://reactjs.org/docs/hooks-intro.html}
+}
+
+
+@misc{Facebook.d,
+ author = {Facebook},
+ editor = {GitHub},
+ title = {React: A declarative, efficient, and flexible JavaScript library for building user interfaces.},
+ url = {https://github.com/facebook/react}
+}
+
+
+@misc{Facebook.e,
+ author = {Facebook},
+ title = {React Native},
+ url = {https://github.com/facebook/react-native}
+}
+
+
+@misc{Facebook.f,
+ author = {Facebook},
+ title = {Who's using React Native},
+ url = {https://reactnative.dev/showcase}
+}
+
+
+@article{Flora.2014,
+ author = {Flora, Harleen K. and Wang, Xiaofeng and Chande, Swati V.},
+ year = {2014},
+ title = {An Investigation on the Characteristics of Mobile Applications: A Survey Study},
+ pages = {21--27},
+ volume = {6},
+ number = {11},
+ issn = {20749007},
+ journal = {International Journal of Information Technology and Computer Science},
+ doi = {10.5815/ijitcs.2014.11.03}
+}
+
+
+@misc{Gaunt.,
+ author = {Gaunt, Matt},
+ title = {Service Workers: an Introduction},
+ url = {https://developers.google.com/web/fundamentals/primers/service-workers}
+}
+
+
+@book{Hume.2018,
+ author = {Hume, David},
+ year = {2018},
+ title = {Progressive web apps},
+ url = {http://proquest.tech.safaribooksonline.de/9781617294587},
+ address = {Shelter Island, NY},
+ publisher = {{Manning Publications}},
+ isbn = {9781617294587},
+ file = {https://external.dandelon.com/download/attachments/dandelon/ids/DE001B923F495080A1C1EC1258221003D76BF.pdf}
+}
+
+
+@article{Hyun.2018,
+ author = {Hyun, Sangwon and Cho, Junsung and Cho, Geumhwan and Kim, Hyoungshick},
+ year = {2018},
+ title = {Design and Analysis of Push Notification-Based Malware on Android},
+ pages = {1--12},
+ volume = {2018},
+ issn = {1939-0114},
+ journal = {Security and Communication Networks},
+ doi = {10.1155/2018/8510256},
+ file = {Hyun, Cho et al. 2018 - Design and Analysis of Push:C\:\\Users\\MSA\\Documents\\Citavi 6\\Projects\\BA\\Citavi Attachments\\Hyun, Cho et al. 2018 - Design and Analysis of Push.pdf:pdf}
+}
+
+
+@article{Jobe.2013,
+ author = {Jobe, William},
+ year = {2013},
+ title = {Native Apps Vs. Mobile Web Apps},
+ pages = {27},
+ volume = {7},
+ number = {4},
+ journal = {International Journal of Interactive Mobile Technologies (iJIM)},
+ doi = {10.3991/ijim.v7i4.3226}
+}
+
+
+@misc{LePage.2017,
+ author = {LePage, Pete},
+ editor = {web.de},
+ year = {2017},
+ title = {The Cache API: A quick guide: Learn hot to use the Cache API to mak eyour application data available offline.},
+ url = {https://web.dev/cache-api-quick-guide/}
+}
+
+
+@inproceedings{Majchrzak.2018,
+ author = {Majchrzak, Tim A. and Bi{\o}rn-Hansen, Andreas and Gr{\o}nli, Tor-Morten},
+ title = {Progressive Web Apps: the Definite Approach to Cross-Platform Development?},
+ publisher = {{Hawaii International Conference on System Sciences}},
+ series = {Proceedings of the Annual Hawaii International Conference on System Sciences},
+ editor = {Bui, Tung},
+ booktitle = {Proceedings of the 51st Hawaii International Conference on System Sciences},
+ year = {2018},
+ doi = {10.24251/HICSS.2018.718},
+ file = {http://hdl.handle.net/10125/49887}
+}
+
+
+@misc{MDNcontributors.,
+ author = {{MDN contributors}},
+ title = {Progressive web apps (PWAs)},
+ url = {https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps}
+}
+
+
+@misc{MDNcontributors.b,
+ author = {{MDN contributors}},
+ title = {Web App Manifest},
+ url = {https://developer.mozilla.org/de/docs/Web/Manifest}
+}
+
+
+@book{PeteGoodliffe.2007,
+ author = {{Pete Goodliffe}},
+ year = {2007},
+ title = {Code Craft: The Practice of Writing Excellent Code},
+ url = {http://amazon.com/o/ASIN/1593271190/},
+ publisher = {{No Starch Press}},
+ isbn = {1-59327-119-0}
+}
+
+
+@misc{Richard.,
+ author = {Richard, Sam and LePage, Pete},
+ title = {What makes a good Progressive Web App?},
+ url = {https://web.dev/pwa-checklist/}
+}
+
+
+@book{Zammetti.2018,
+ abstract = {1. React Native: A Gentle Introduction -- 2. Getting to Know React Native -- 3. Restaurant Chooser, Part 1 -- 4. Restaurant Chooser, Part 2 -- 5. React Native Trivia, Part 1 -- 6. React Native Trivia, Part 2 -- 7. Time for Some Fun: A React Native Game, Part 1 -- 8. Time for Some Fun: A React Native Game, Part 2
+
+
+
+Discover how to use React Native in the real world, from scratch. This book shows you what React Native has to offer, where it came from, and where it's going. You'll begin with a solid foundation of practical knowledge, and then build on it immediately by constructing three different apps. You'll learn how to use each feature of React Native by working on two full projects and one full game. These aren't just simple React Native Hello World examples (although you'll naturally start there!) but are apps that you can, if you so choose, install on your mobile devices and use for real. Throughout this book, you'll gain real-world familiarity with React Native as well as supporting components from Expo, NativeBase, React Navigation and the Redux and Lodash libraries. You'll also build server-side code for a mobile React Native app to talk to using the popular Node.js and Socket.io library, providing you a holistic view of things even beyond React Native. And, you'll see many helpful tips, tricks and gotchas to watch out for along the way! Practical React Native offers practical exercises that will give you a solid grasp of building apps with React Native, allowing you to springboard into creating more advanced apps on your own.Creating a game with React Native will allow you to see a whole other perspective on what React Native can do},
+ author = {Zammetti, Frank},
+ year = {2018},
+ title = {Practical React Native: Build Two Full Projects and One Full Game using React Native},
+ address = {Berkeley, CA},
+ publisher = {Apress},
+ isbn = {9781484239391},
+ doi = {10.1007/978-1-4842-3939-1}
+}
+
+

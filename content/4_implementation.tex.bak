@@ -1,0 +1,37 @@
+\chapter{Implementierung}\label{ch:implementation}
+
+Um die zwei Ansätze zur Implementierung einer Applikation zu testen, wurde eine App zur Darstellung der aktuellen COVID-19 Fallzahlen programmiert. Diese bezieht ihre Daten von dem offiziellen API des Robert-Koch-Instituts, die täglich aktualisiert werden %(https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0). Konkret wird die Datenbank „RKI Corona Landkreise“ genutzt, die die Zahlen sortiert nach Landkreisen im (GEO)JSON-Format zur Verfügung stellt %(https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/ef4b445a53c1406892257fe63129a8ea_0?geometry=-23.227%2C46.270%2C39.483%2C55.886). Für die Darstellung der Fallzahlen werden hierbei folgende Attribute bezogen auf den Landkreis ausgewählt: Art (BEZ), Name (GEN), Fälle (cases), Fälle der letz-ten 7 Tage pro 100.000 Einwohner (cases7_per_100k), Fallzahlen pro 100.000 Einwohner (cases_per_100k), eine ID (AdmUnitId),  und Aktualisierung (last_update). Die Fallzahlen werden in der Anwendung zu Zwecken der Übersicht auf zwei Nachkommastellen gerundet.
+Beide Applikationen sind mit dem Quelltext-Editor Visual Studio Code entwickelt. Zum Testen der Android Anwendung wurde ein Emulator von Android Studio verwendet.
+
+
+\section{Progressive Web Applikation mit React}
+%Zur Erstellung der React App wurde die Tool Chain „create-react-app“ genutzt (https://reactjs.org/docs/create-a-new-react-app.html)
+Offline-Betrieb
+PWA: Offline Betrieb wird durch Service Worker ermöglicht. Fetch Event sollte abgefangen und gecached werden, sodass die Seite auch ohne Internet arbeitet, im Notfall (wenn nichts gecached wird) sollte trotzdem eine individuelle Seite angezeigt werden (um Nutzer eine besser / engere Erfahrung zu ermöglichen). 
+%https://developer.mozilla.org/de/docs/Web/API/Navigator 
+%https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers 
+%Cache then network Ansatz genutzt! https://web.dev/offline-cookbook/ Erklärung wie der funktioniert und wieso sich genau für diesen entschieden wurde
+Installierbarkeit
+%PWA: durch den Service Worker und den manifest.json. (https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen) (https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Installable_PWAs) POLYFILL in iOS! [6]
+%Wie bereits erwählt handelt es sich bei dem App Manifest um eine JSON-Datei, die Informationen über die Anwendung bereitstellt. Wichtige Attribute sind beispielsweise „display“, „name“, „description“ und „scope“ [5]. Noch ist das Manifest als „experimental“ markiert, da es nicht von allen Browsern kom-plett unterstützt wird. Aktuell betrifft das x, x und x. Bei X ist es nicht vorhersehbar, ob es in Zukunft eine komplette Unterstützung geben wird. Das Manifest wird per „<link>“-Tag in die index.html eingebunden (https://web.dev/add-manifest/ , https://www.w3.org/TR/appmanifest/) und dessen Informationen sind danach auch im „Application“-Tab der Google Developer Tools einsehbar. 
+
+Standortzugriff
+Navigator.getCurrentPosition um Koordinaten zu bekommen, Google Geolocation / Geocaching API um aus Koordinaten den LK rauszubekommen || Freie API zum Reverse Geocaching, Permission für das Abfragen des Standorts. Funktioniert bei Apple Safari und Chrome, Android Chrome
+Navigator window objekt erklären
+Benachrichtigungen
+%Notification & Push API, Unterscheidung zwischen Local Notification (https://whatwebcando.today/local-notifications.html) und Push Notifications (https://whatwebcando.today/push-notifications.html).
+Um das Ganze einfach zu halten, 
+%https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push 
+%https://notifications.spec.whatwg.org/
+%https://developers.google.com/web/ilt/pwa/introduction-to-push-notifications
+Wie bereits erwähnt k
+Funktioniert nicht bei iOS ?!
+Firebase Cloud Messaging\cite{Hyun.2018}
+Hier wird der BaaS Firebase genutzt, der von Google zur schnellen Implementation eines Backendsys-tems zur Verfügung gestellt wird. Speziell wurde das Firebase Clould Messaging (FCM) und die Real Time Database genutzt. Über dessen Konsole können einmalige sowie regelmäßige Benachrichtigungen an alle registrieren Nutzer versendet werden. Fettes Bild und Konzept erklären
+-	Offline Funktionalität https://web.dev/offline-cookbook/
+-	Lokation: API Abfrage und navigator.geolocation
+-	PWA: Installierbarkeit wird auch durch Service Worker ermöglicht. Zusätzliche Anforderungen sind HTTPS und ein App Manifest. Bei Chrome gibt es nach öfter aufrufen der Seite einen Prompt, der fragt, ob die App installiert werden soll. Bei Safari / Chrome muss das beforein-stallprompt implementiert werden. (Nur Safari?)
+Installieren kann man die PWA direkt aus dem Browser.
+
+
+\section{Native App mit React Native}

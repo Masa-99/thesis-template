@@ -1,7 +1,7 @@
 \chapter{Fazit und Ausblick}\label{ch:summary}
 
 Klärung der wissenschaftlichen Frage, Bezug auf Einleitung, Future Work 
-Kritische Hinterfragung: Moderne Webanwendungen haben mittlerweile viele der Funktionen inbegriffen und es bedarf deshalb keine zusätzlichen Entwicklungsaufwand. Der Begriff PWA ist deshalb eher als Buzzword zu sehen, als der Gedanke des „nativen“ Webs entstanden ist, bezeichnet aber mittlerweile „nur“ Webanwendungen.
+Kritische Hinterfragung: Moderne Webanwendungen haben mittlerweile viele der Funktionen inbegrif-fen und es bedarf deshalb keine zusätzlichen Entwicklungsaufwand. Der Begriff PWA ist deshalb eher als Buzzword zu sehen, als der Gedanke des „nativen“ Webs entstanden ist, bezeichnet aber mittlerweile „nur“ Webanwendungen.
 %CLI bringt zu viele Abhängigkeiten.
 %Windows Linux Mac Unterstützung
 %Wie sicher sind PWAs im Vergleich zu Native Apps?
