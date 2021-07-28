@@ -1,0 +1,22 @@
+\chapter*{Abkürzungsverzeichnis}
+\begin{acronym}
+\acro{apk}[APK]{Android Package}
+\acro{api}[API]{Application Programming Interface}
+\acro{apn}[APNs]{Apple Push Notification service}
+\acro{avd}[AVD]{Android Virtual Device}
+\acro{cdn}[CDN]{Continous Delivery Network}
+\acro{dom}[DOM]{Document Object Model}
+\acro{fcm}[FCM]{Firebase Cloud Messaging}
+\acro{gps}[GPS]{Global Positioning System}
+\acro{https}[HTTPS]{Hypertext Transfer Protocol Secure}
+\acro{ide}[IDE]{Integrated development environment}
+\acro{ipa}[ipa]{iOS App Store Package}
+\acro{json}[JSON]{JavaScript Object Notation}
+\acro{os}[OS]{Operating System}
+\acro{pwa}[PWA]{Progressive Web App}
+%\acro{abktag}[RNA.]{React Native App}
+\acro{spa}[SPA]{Single-Page Application}
+\acro{sdk}[SDK]{Software Development Kit}
+\acro{ui}[UI]{User Interface}
+\acro{url}[URL]{Uniform Resource Locator}
+\end{acronym}

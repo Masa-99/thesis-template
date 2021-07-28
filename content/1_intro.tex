@@ -1,14 +1,45 @@
 \chapter{Einleitung}\label{ch:intro}
-You can also write footnotes.\footnote{Footnotes will be positioned automatically.}
-\blindtext
+%Thema einleiten: Ich vergleiche PWAs mit nativen Apps.
+%erklären was native ist und was da so geht
+Egal ob Spotify, TikTok oder Twitter - mobilen Anwendungen sind aus unserem Lebensalltag nicht mehr wegzudenken.
+Dafür sprechen auch die stetig zunehmende Anzahl an App Downloads, welche 2020 bei 218 Billionen liegt \cite{Iqbal.06.05.2021}.\\
+Bei der Entwicklung dieser Anwendungen gibt es jedoch immer wieder auftretende Problematiken.
+Beispielsweise die fehlende Kompatibilität einer plattformspezifischen App mit verschiedenen Betriebssystemen und der daraus folgende erhöhte Entwicklungsaufwand.
+Außerdem muss der Nutzer erst überzeugt werden, die Anwendung zu installieren, bevor er sie überhaupt nutzen kann.
+
+%% warum ist pwas besser als native? --> überleitung
+Ein aufstrebendes Konzept, dass sich die Universalität des Webs zu nutzen macht, ist das der \acp{pwa}.
+Diese besonderen Anwendungen sind über das Web erreichbar und sollen die Freiheiten einer Browseranwendung mit den Vorzügen einer nativen Applikation vereinen.
+2015 von dem Chrome Entwickler Alex Russel und dem Designer Frances Berriman als solche benannt, bieten \acp{pwa} immer mehr Möglichkeiten an \cite{Russell.2015}.
+Dabei spielt auch die Weiterentwicklung von Webschnittstellen eine bedeutsame Rolle.
+Mit Technologien wie den Service Worker und dem App Manifest ermöglichen PWAs Funktionalitäten, die bislang nativen Anwendungen vorenthalten waren.
+Dazu gehören beispielsweise Push Benachrichtigungen, Standortzugriff, Offlinebetrieb und Installierbarkeit.
+
+Gerade in der aktuellen Zeit, in der laut einer Statistik von \textit{StatCounter} 4,32 Billionen Menschen das Internet von mobilen Endgeräten aus nutzen, bietet sich somit eine enorme Chance für die Zukunft von mobilen Anwendungen und des Webs \cite{StatCounter.2021}.
+Daher ist der Vergleich von \acp{pwa} mit einer Nativen App relevant und wird in der vorliegenden Arbeit untersucht.
 
 \section{Zielsetzung}
-
-\blindtext
+%Warum wurde diese Arbeit mit genau dieser Zielsetzung bearbeitet?
+%fachliche Kontext und die Relevanz der Fragestellung  werden nicht sichtbar
+Im Rahmen dieser Arbeit soll untersucht werden, welche Vor- und Nachteile das Entwickeln einer \ac{pwa} gegenüber einer nativen App bezüglich Funktionalität, Kompatibilität mit verschiedenen Betriebssystemen und Entwicklungsaufwand bietet.
+Um beide Verfahren vergleichen zu können, wird für die Entwicklung der Native App das Framework React Native verwendet, da dies - ähnlich zu \acp{pwa} - plattformunabhängig ist.
+Diese Besonderheit wurde bisher noch nicht betrachtet. %?
+%Die Besonderheit stellt dabei die Entwicklung einer nativen App mit React Native dar, da dies den Vorteil von Plattformunabhängigkeit aufweist, im Gegensatz zu der nativen Entwicklung von Apps.
+Außerdem sollen dabei auch die aktuellen Grenzen von \acp{pwa} aufgezeigt und somit die Frage beantwortet werden, ob \acp{pwa} Native Apps zum jetzigen Zeitpunkt ersetzen können.
 
 \section{Umfeld}
-
-Das Thema der Arbeit wird in Zusammenarbeit mit dem IT-Consulting Unternehmen OPITZ CONSULTING bearbeitet. Die Betreuung findet durch Senior Consultant Michael Müller statt. Das Unternehmen entwickelt Lösungen für seine Kunden in den Bereichen Applications, Analytics, Infrastructure und Integration. Da sich die Software- und Webentwicklungsbranche rasant verändert und weiterentwickelt, ist es für die Firma unerlässlich, neue Technologien und Innovationen zu erkennen und Know-How in diesen zu entwickeln, um potenziellen Kunden eine solche Lösung anzubieten. Besonders interessant sind hierbei diejenigen Innovationen, die mit wenig Aufwand viele Vorteile mit sich bringen.
+Das Thema der Arbeit wird in Zusammenarbeit mit dem IT-Consulting Unternehmen OPITZ CONSULTING bearbeitet.
+Die Betreuung findet durch Senior Consultant Michael Müller statt.
+Das Unternehmen entwickelt Lösungen für seine Kunden in den Bereichen Applications, Analytics, Infrastructure und Integration.
+Da sich die Software- und Webentwicklungsbranche rasant verändert und weiterentwickelt, ist es für die Firma unerlässlich, neue Technologien und Innovationen zu erkennen.
+Daraufhin kann Wissen in diesen Bereichen aufgebaut werden, um Lösungen mit diese Technologien potenziellen Kunden anzubieten.
+Besonders interessant sind hierbei diejenigen Innovationen, die mit geringem Aufwand eine Vielzahl an Vorteilen mit sich bringen.
 
 \section{Aufbau der Arbeit}
-Im Rahmen dieser Arbeit soll zuerst auf die Grundlagen von mobilen Anwendungen sowie der JavaScript-Bibliothek React und dem Framework React Native eingegangen werden. Im dritten Kapitel wird ein Kriterienkatalog festlegen, anhand dessen die implementierten Anwendungen später beurteilt werden. Demnach sollen Entwicklungsaufwand, Kompatibilität und Funktionalitäten, die mit dem jeweiligen Ansatz umgesetzt werden können, gegeneinander abgewägt werden. Im Anschluss wird die Programmierung der zwei Applikationen vorgestellt und auf spezielle Vorgehensweisen eingegangen. Sinn der Apps ist es, die aktuellen Covid-19 Fallzahlen der offiziellen Datenbank des Robert-Koch-Instituts darzustellen und weiterführende Funktionalitäten wie unter anderem Offline-Betrieb, Standortzugriff oder Benachrichtigungen zu unterstützen. Zuletzt sollen die Anwendungen anhand des Kriterienkatalogs bewertet und verglichen werden.
+Zuerst soll auf die Grundlagen von mobilen Anwendungen und \acp{pwa} sowie der JavaScript-Bibliothek React und dem Framework React Native eingegangen werden.
+Im dritten Kapitel wird ein Kriterienkatalog festgelegt, anhand dessen die implementierten Anwendungen später beurteilt werden.
+Dieser soll die Funktionalität, die Kompatibilität mit verschiedenen Betriebssystemen und den Entwicklungsaufwand in Abhängigkeit der verwendeten Technologie berücksichtigen.
+Im Anschluss wird die Programmierung der zwei Applikationen vorgestellt und auf spezielle Vorgehensweisen eingegangen.
+Der Zweck der Apps ist es, die aktuellen COVID-19 Fallzahlen der offiziellen Datenbank des Robert-Koch-Instituts darzustellen und weiterführende Funktionalitäten wie Installation, Offlinebetrieb, Standortzugriff, Kontaktzugriff und Benachrichtigungen zu unterstützen.
+Zuletzt sollen die zwei Anwendungen anhand des Kriterienkatalogs verglichen und bewertet werden.
+%Dem Unternehmen soll durch die Ergebnisse der Arbeit ermöglicht werden, für konkrete Anwendungsfällen abwägen zu können, welche der beiden Ansätze sich für die Umsetzung anbietet.

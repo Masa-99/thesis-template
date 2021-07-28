@@ -3,14 +3,14 @@
     a4paper,
     egregdoesnotlikesansseriftitles,
     toc=chapterentrywithdots,
-    twoside,openright,
+    oneside,openright,
     titlepage,
     parskip=half,
     headings=normal,  % reduces heading size
     listof=totoc,
     bibliography=totoc,
     index=totoc,
-    captions=tableheading,  % caption below table
+	captions=tableheading,  % caption below table
     chapterprefix,
     listof=flat,
     final
@@ -18,18 +18,17 @@
 
 
 % details about your thesis
-\newcommand{\titel}{Betrachtung aktueller Grenzen von Progressive Web Apps im Gegensatz zu Native Apps}
+\newcommand{\titel}{Betrachtung aktueller Chancen von Progressive Web Apps im Gegensatz zu Native Apps}
 \newcommand{\artderarbeit}{Bachelorarbeit}  % {Bachelorarbeit,Masterarbeit}
 \newcommand{\autor}{Mahja Sarschar}
 \newcommand{\studiengang}{Medieninformatik}  % {Informatik,Wirtschaftsinformatik,Medieninformatik}
 \newcommand{\matrikelnr}{320\,1818}
-\newcommand{\erstgutachter}{Prof.\,Dr.~Mathias\,Teßmann}
-\newcommand{\zweitgutachter}{Prof.\,Dr.~Christian\,Schiedemeier}
-\newcommand{\betreuer}{B.Sc.\,~Michael\,Müller}
+\newcommand{\erstgutachter}{Prof.\,Dr.~Matthias\,Teßmann}
+\newcommand{\zweitgutachter}{Prof.\,Dr.~Christian\,Schiedermeier}
+\newcommand{\betreuer}{Dipl.-Ing.\,~Michael\,Müller}
 \newcommand{\unternehmen}{OPITZ\,CONSULTING\,GmbH}
 \newcommand{\logo}{figures/TH-Nuernberg-RGB.png}
-\newcommand{\keywords}{pwa, native apps}
- 
+\newcommand{\keywords}{progressive web app, native apps, html5} 
 
 % custom head and foot
 \usepackage[automark]{scrlayer-scrpage}
@@ -59,6 +58,9 @@
 \usepackage{url}
 \usepackage[toc]{glossaries}
 \usepackage{pdfpages}
+\usepackage{subfigure}
+\usepackage{acronym}
+\usepackage{makecell}
 
 % table setup
 \usepackage{longtable}
@@ -79,12 +81,12 @@
     pdfkeywords={\keywords},
     pdfpagelabels=true,
     colorlinks=true,
-    linkcolor=red,
-    urlcolor=magenta,
+    linkcolor=black,
+    urlcolor=black,
     anchorcolor=black,
-    citecolor=cyan,
-    filecolor=magenta,
-    menucolor=red,
+    citecolor=black,
+    filecolor=black,
+    menucolor=black,
     plainpages=false,
     hypertexnames=true,
     linktocpage=true,
@@ -97,7 +99,7 @@
 	tabsize=3,
 	extendedchars=true,
 	frame=single,
-	showstringspaces=true,
+	showstringspaces=false,
 	numbers=left,
 	numberstyle=\small,
 	breakautoindent=true
@@ -118,18 +120,20 @@
 \newcommand{\dahe}{\mbox{d.\,h.,\ }}
 \newcommand{\bzw}{\mbox{bzw.\ }}
 \newcommand{\bzgl}{\mbox{bzgl.\ }}
-\newcommand{\eg}{\mbox{e.\,g.\ }}
-\newcommand{\ie}{\mbox{i.\,e.\ }}
+\newcommand{\kA}{\mbox{k. A.\ }}
 \newcommand{\wrt}{\mbox{w.\,r.\,t.\ }}
 \newcommand{\etal}{\mbox{\emph{et.\,al.\ }}}
+\newcommand*{\quelle}[1]{\par\raggedleft\footnotesize Quelle:~#1}
 
-
-% TODO remove if not needed...
-\usepackage{blindtext}
+%acronym plurals
+\acrodefplural{pwa}[PWAs]{Progressive Web Apps}
+\acrodefplural{sdk}[SDKs]{Software development kits}
+\acrodefplural{spa}[SPAs]{Single-Page Applications}
+\acrodefplural{api}[APIs]{Application Programming Interfaces}
 
 % load glossary entries
-\makenoidxglossaries
-\loadglsentries{glossary}
+%\makenoidxglossaries
+%\loadglsentries{glossary}
 
 \begin{document}
 
@@ -147,6 +151,18 @@
 
 \tableofcontents
 
+\listoffigures
+\cleardoublepage
+
+\listoftables
+\cleardoublepage
+
+\renewcommand{\lstlistlistingname}{Listings}  % change for German thesis
+\lstlistoflistings
+\cleardoublepage
+
+\include{content/abbreviations}\cleardoublepage
+
 \mainmatter
 \include{content/1_intro}
 \include{content/2_basics}
@@ -154,25 +170,13 @@
 \include{content/4_implementation}
 \include{content/5_results}
 \include{content/6_summary}
-
 % remove if not needed
-\appendix
-\include{content/a1_supplemental}
+%\appendix
+%\include{content/a1_supplemental}
 
 \backmatter
-\listoffigures
-%\cleardoublepage
-
-\listoftables
-%\cleardoublepage
-
-\renewcommand{\lstlistlistingname}{Listings}  % change for German thesis
-\lstlistoflistings
-%\cleardoublepage
 
 \bibliographystyle{ieeetr}
 \bibliography{literature}
-
-\printnoidxglossaries
 
 \end{document}

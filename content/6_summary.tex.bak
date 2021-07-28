@@ -1,0 +1,38 @@
+\chapter{Fazit und Ausblick}\label{ch:summary}
+%Klärung der wissenschaftlichen Frage, Bezug auf Einleitung, Future Work 
+
+\section{Fazit}
+In dieser Arbeit wurden anhand der Kriterien Funktionalität, Kompatibilität mit verschiedenen Betriebssystemen und Entwicklungsaufwand \acp{pwa} mit Native Apps verglichen.
+Hierfür mit den Technologien jeweils eine App entwickelt, welche die COVID-19-Fallzahlen darstellt und filtern kann.
+Anhand dieses Anwendungsfalles wurde analysiert, welche Vor- und Nachteile das Entwickeln mit diesen Technologien hat und ob eine \ac{pwa} die Native App ersetzen kann.
+
+Dabei hat sich herausgestellt, dass \acp{pwa} mittlerweile viele Funktionalitäten von nativen Anwendungen wie Installierbarkeit, Offlinebetrieb, Standortzugriff, Kontaktzugriff und Benachrichtigungen umsetzen können und deshalb gerade für unkomplizierte Anwendungen eine Alternative bieten.
+Besonders attraktiv für Unternehmen ist dabei, dass es sich generell um eine für den Entwickler und Nutzer plattformunabhängige Lösung handelt, wodurch Ressourcen gespart werden können.
+Außerdem ist der Entwicklungsaufwand der \textit{pwa} geringer als der einer nativen Anwendung.\\
+Dennoch ist ein entscheidender Faktor für die Etablierung von \acp{pwa} die fehlende Unterstützung durch iOS, da dadurch 26,34 Prozent des weltweiten Marktanteils von mobilen Betriebssystemen weniger Funktionalitäten zur Verfügung stehen \cite{ODea.2021}.
+Dies betrifft wie in der Arbeit dargestellt die Push \ac{api} und Notification \ac{api}, ferner aber auch den Zugriff auf Bluetooth oder die Badging \ac{api}.
+Doch in Anbetracht der Webschnittstellen, die sich seit dem Aufschwung von \acp{pwa} 2015 entwickelt haben, wird deutlich, dass die Zukunft von mobilen Anwendungen vielfältig ist.
+%Deshalb sind \acp{pwa} aktuell nicht in der Lage alle Native Apps zu ersetzen.\\
+
+%Zusammenfassend lässt sich sagen, das \acp{pwa} immer wichtiger werdende Konkurrenten für Native Apps sind, denn mittlerweile fehlen nur noch ein paar Funktionalitäten, um in Zukunft komplett auf Native Apps verzichten zu können.
+%Dennoch sind die fehlenden Ausstattungsmerkmale ausschlaggebend, denn Apps ohne beispielsweise Zugriff auf Kontakte oder die Funktion des Geofencings, sind in vielen Fällen nicht konkurrenzfähig.
+%Durch die Schnelligkeit und einfach Umsetzung einer Web Anwendung mit erweiterter Grundfunktionalität ist eine \ac{pwa} eine solide Wahl, um schnell ans Ziel zu kommen.
+%Dadurch dass React \acp{pwa} und React Native Apps in ihrer Grundlage auf dem gleichen Prinzip beruhen, nämlich React, ist es durch React Native möglich, eine bereits bestehende React \ac{pwa} durch Übertragung in React Native zu einer Native App umzuprogrammieren, die alle Funktionalitäten einer Native App besitzt.
+%Dies ist besonders vorteilhaft, da die Entwicklung nicht von Anfang an gemacht werden muss und sich somit viel Zeit sparen lässt.
+%Wenn der \glqq managed\grqq{} Workflow von React Native genutzt wird, ist das Ergebnis eine Anwendung, die meist ohne weitere Konfiguration sowohl auf Android und iOS lauffähig und testbar ist.
+%Soll die App nun noch plattformspezifische Elemente beinhalten, kann durch das Verwerfen der Expo CLI sogar nativer Code entwickelt werden.
+%Diese schrittweise Erweiterung der Möglichkeiten bietet dem Team eine enorme Flexibilität und optimiert den Entwicklungsaufwand.
+
+\section{Ausblick}
+Für anknüpfende Arbeiten könnten die Analyse von \acp{pwa} und React Native Apps intensiviert werden, indem umfassender auf die verschiedenen Funktionalitäten eingegangen wird, die mit diesen beiden Vorgehensweisen umsetzbar sind.
+Beispiele hierfür sind die Einbindung der Background Sync \ac{api}, Payment Request \ac{api} oder Web Share Target \ac{api}.
+
+Interessant wäre außerdem noch ein Performance Vergleich.
+Da die für diese Arbeit implementierte Anwendung lediglich aus einer Seite mit Daten einer externen Schnittstelle besteht, hat sich der Vergleich nicht angeboten.
+Anders sieht das jedoch bei größeren Anwendungen aus, welche eine Vielzahl von Bildern, Videos und Einträgen nutzen und verwalten wie Twitter oder Pinterest.
+Auch die Ansprache der Schnittstellen eines mobilen Endgeräts sind unter dem Aspekt der Performance zu betrachten, denn dies geschieht performanter mit der betriebssystemspezifischen Programmiersprache.
+
+Ein weiterer wichtiger Faktor, der in zukünftigen Arbeiten betrachtet werden sollte, ist die Sicherheit von Progressive Web Apps.
+Generell besteht eine grundlegende Sicherheit durch den Zugriff mit \ac{https}, jedoch sollte hier auch die umfassend betrachtet werden, welche Maßnahmen zur Verbesserung der Sicherheit von Webanwendungen getroffen werden können.
+Durch die Position des Service Workers als Proxy ist dieser besonders anfällig für bösartige Angriffe \cite{Lee.2018}.
+Der Sicherheitsaspekt ist vor allem bedeutsam für mobilen Anwendungen, die sensible Daten verarbeiten.

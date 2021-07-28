@@ -1,0 +1,43 @@
+\thispagestyle{empty}
+\pdfbookmark[1]{Cover}{cov}
+\begin{titlepage}
+
+\begin{center}
+
+\includegraphics[width=\linewidth]{figures/TH-Nuernberg-RGB.png}\\[1cm]
+\LARGE{Fakultät Informatik}\\[1cm]
+
+\huge
+\textbf{\titel}\\[1cm]
+%
+\Large
+\artderarbeit~im Studiengang \studiengang\\[1cm]
+%
+\large
+vorgelegt von
+
+\Large
+\autor\\[0.5cm]
+\small
+Matrikelnummer \matrikelnr\\[1cm]
+%\vspace*{\fill}
+\large
+\begin{tabular}{p{3cm}p{8cm}}\\
+Erstgutachter:  & \quad \erstgutachter\\[1.2ex]
+Zweitgutachter: & \quad \zweitgutachter\\[1.2ex]
+Betreuer: & \quad \betreuer\\
+Unternehmen: & \quad \unternehmen
+\end{tabular}
+\singlespacing
+\includegraphics[height=1.5cm]{figures/OC-Logo RGB.png} 
+\singlespacing
+\copyright\,\the\year
+\end{center}
+\vspace{-0.5cm}
+\singlespacing
+\small
+\noindent Dieses Werk einschließlich seiner Teile ist \textbf{urheberrechtlich geschützt}.
+Jede Verwertung außerhalb der engen Grenzen des Urheberrechtgesetzes ist ohne Zustimmung des Autors unzulässig und strafbar.
+Das gilt insbesondere für Vervielfältigungen, Übersetzungen, Mikroverfilmungen sowie die Einspeicherung und Verarbeitung in elektronischen Systemen.
+
+\end{titlepage}
