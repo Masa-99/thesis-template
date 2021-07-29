@@ -17,16 +17,12 @@ Um Applikationen im jeweiligen App-Store veröffentlichen zu können, müssen di
 Das erfolgt durch den Prozess der sogenannten Signierung, der ebenfalls plattformabhängig durchgeführt wird.\\
 Eine App kann nach der Signierung und Überprüfung nur durch eine Aktualisierung verändert (\zB Update oder Bugfix) werden.
 Deshalb folgt auf eine Aktualisierung auch eine erneute Überprüfung und Veröffentlichung der App.\\
-%Danach wird die App teilweise manuell überprüft, bevor sie letztendlich im App-Store publiziert wird.
-%Wichtig ist hierbei, dass sich die App, nach jener Überprüfung nicht mehr ändern darf.
-%Dies ist erst wieder durch eine offizielle Aktualisierung möglich, welche wiederum den Überprüfungsprozess durchlaufen muss.\\
 Ferner können Android Apps auch in ihrer Rohfassung auf Android Geräten installiert werden.
 Hierfür muss der Entwicklermodus aktiviert und das \ac{apk}\footnote{Plattformspezifische Sammlung von Dateien, die wie Quellcode und Ressourcen für die Installation und Nutzung der App beinhaltet} auf das Endgerät geladen werden.
-Das Äquivalent in iOS ist die \ac{ipa}-Datei.
+Das Äquivalent in iOS ist die \ac{ipa}.
 
 \section{Cross-platform Applikationen}
 Unter cross-platform (z.\,Dt. plattformunabhängig) Applikationen versteht man Anwendungen, die auf einer Code-Basis aufbauen und zur Laufzeit zu mehreren Anwendungen für unterschiedliche Endgeräte kompiliert werden.
-%Außerdem können sie in herkömmlichen Quelltext-Editoren entwickelt werden, da sie im Gegensatz zu nativen Anwendungen unabhängig von bestimmten Betriebssystemen oder SDKs sind.
 Der Vorteil solcher Applikationen ist, dass sie, obwohl sie auf demselben Code basieren, sich komplett den plattformspezifischen Stil anpassen.
 Somit verringern sich auch die Entwicklungskosten, die bei Implementierung von jeweils einer Anwendung pro Betriebssystem anfallen würden.
 Klar abzugrenzen sind plattformunabhängige Anwendungen von hybriden Anwendungen.
@@ -137,13 +133,7 @@ Weitere Funktionalitäten wie der React Router zur Programmierung von der Naviga
 Ebenso gibt es \ac{ui}-Bibliotheken wie MaterialUI oder PrimeReact für React, die häufig implementierte Komponenten im modernen Design anbieten.
 Generell lassen sich \ac{pwa} jedoch mit jedem Framework oder auch mit einer einfachen Vanilla-JavaScript Implementierung verwirklichen.
 
-Kritik erlangt React vor allem wegen des Vorwurfs, dass es gegen das Entwurfsprinzip der Trennung der Verantwortlichkeiten (Separation of Concerns) verstößt.
-Dies wird in der Webentwicklung so umgesetzt, dass verschiedene Technologien wie HTML, CSS und JavaScript jeweils in eigenen Dateien modelliert oder programmiert werden.
-Im Gegensatz dazu steht jedoch Reacts Syntax Erweiterung JSX.
-Diese ermöglicht die drei genannten Technologien innerhalb von JavaScript zu entwickeln. Ein Beispiel dafür ist in \ref{lst:label} zu sehen.
-Wichtig ist hier jedoch, dass die Zeile 8 auch in JavaScript geschrieben werden kann, da es sich hierbei letztendlich um den Aufruf der React.createElement(component, props, …children)-Funktion handelt \cite{Facebook.h}.\\
-
-\begin{lstlisting}[language=Java,caption={Nutzung von JSX},captionpos=b,label={lst:label}]
+\begin{lstlisting}[language=Java,caption={Nutzung von JSX},captionpos=b,label={lst:jsx}]
 import React from 'react';
 import ReactDOM from 'reactdom';
 
@@ -156,12 +146,20 @@ const Example = (props) =>  {
 }
 \end{lstlisting}
 
+Kritik erlangt React vor allem wegen des Vorwurfs, dass es gegen das Entwurfsprinzip der Trennung der Verantwortlichkeiten (Separation of Concerns) verstößt.
+Dies wird in der Webentwicklung und verschiedenen Frameworks oftmals so umgesetzt, dass verschiedene Technologien wie HTML, CSS und JavaScript jeweils in eigenen Dateien modelliert oder programmiert werden.
+Im Gegensatz dazu steht jedoch Reacts Syntax Erweiterung JSX.
+Diese ermöglicht die drei genannten Technologien innerhalb von JavaScript zu entwickeln.\\
+Ein Beispiel dafür ist in \ref{lst:jsx} zu sehen.
+Wichtig ist hier jedoch, dass die Zeile 8 auch in JavaScript geschrieben werden kann, da es sich hierbei letztendlich um den Aufruf der React.createElement(component, props, …children)-Funktion handelt \cite{Facebook.h}.
+
 Außerdem gibt es einige Änderungen, die sich durch diese Art zu programmieren ergeben.
 Beispielsweise kann in JSX auf das Semikolon am Ende einer Zeile verzichtet werden und die CSS-Klasse \textit{class} nennt sich \textit{className}.
 Letzteres ist eines von mehreren Syntaxänderungen bei JSX.
 Dem zugrunde, dass jeder JSX-Code in JavaScript-Code umkompiliert wird.
 Das Schlüsselwort \textit{class} ist dabei in JavaScript ein reserviertes Wort für Klassen und nicht für eine CSS-Klasse.
-Ein weiteres Beispiel ist \textit{htmlFor} statt \textit{for}. Durch diese Syntax bietet React eine inklusive Dateistruktur.
+Ein weiteres Beispiel ist \textit{htmlFor} statt \textit{for}.\\
+Durch JSX Syntax bietet React eine inklusive Dateistruktur.
 Die Entwickler begründen das damit, dass es hier im Gegensatz zu anderen JS-Frameworks, in denen es pro Komponente jeweils eine getrennte HTML-, CSS- und JavaScript-Datei gibt, lediglich um eine Trennung der Technologien, nicht aber der Verantwortlichkeiten, handelt.
 Diese Syntax hingegen verbinden die Render Logik enger mit den Benutzeroberfläche und führt bei einer korrekten Aufteilung in Komponenten zu einer starken Kohäsion.
 Das bietet dem Entwickler mehr Übersichtlichkeit und Verständnis für Zusammengehörigkeit.
@@ -197,7 +195,8 @@ Sie werden erstmalig direkt nach dem Rendern der Komponente ausgeführt. Außerd
 
 Die \textit{useState-Hook} dient zur Deklaration eines lokalen \textit{States}.
 In Zeile 4 des folgenden Beispiels \ref{lst:useState} wird der \textit{State} \textit{counter} in der Komponente Example initialisiert.
-Dieser erhält den Standardwert 0 und verfügt über einen Getter -- hier genannt \textit{counter} -- und den Setter, genannt \textit{setCounter()}, über diese Funktion der Zustand geändert werden kann.\\
+Dieser erhält den Standardwert 0 und verfügt über einen Getter -- hier genannt \textit{counter} -- und den Setter, genannt \textit{setCounter()}, über diese Funktion der Zustand geändert werden kann.
+
 \begin{lstlisting}[language=Java,caption={Beispiel der Nutzung von useState},captionpos=b,label={lst:useState}]
 import React, { useState } from "react";
 
@@ -211,7 +210,7 @@ Es bietet sich deshalb an, Ressourcenanfragen hier zu behandeln.
 Das Beispiel in \ref{lst:useEffect} zeigt einen einfachen \textit{Effect} welcher die frühere \textit{componentDidMount}-Funktion und \textit{componentWillUnmount()}-Funktion ersetzt.
 Der erste Übergabeparameter des \textit{useEffect}-Aufrufs ist eine Funktion, die ausgeführt werden soll und der Zweite ein Array, genannt \textit{dependency array}.
 Wenn das Array leer ist, bedeutet das, dass der \textit{Effect} nur einmal nach dem Rendern der Komponente ausgeführt werden soll.
-Durch jedes Element, das diesem Array hinzugefügt wird, startet erneut diejenige Funktion, die als erster Übergabeparameter übergeben wurde.\\
+Durch jedes Element, das diesem Array hinzugefügt wird, startet erneut diejenige Funktion, die als erster Übergabeparameter übergeben wurde.
 
 \begin{lstlisting}[language=Java,caption={Beispiel für Nutzung der useEffect-Hook},captionpos=b,label={lst:useEffect}]
 import React, { useEffect } from "react";
@@ -247,24 +246,22 @@ In der \ref{fig:structure} ist diese Aufteilung abgebildet.
 \begin{figure}[h]
  \centering
  \includegraphics[width=1\textwidth]{figures/Aufbau_RN.png}
+  \quelle{basierend auf \cite{Behrends.2018}}
  \caption{Architektur React Native}
- \quelle{\cite{o.V..o.J.}}
  \label{fig:structure}
 \end{figure}
 
 Ersteres bietet in iOS JavaScriptCore und in Android eine Lösung, die von React Native zur Verfügung gestellt wird.
 Dabei gibt es in React Native plattformübergreifende Abstraktionen wie \textit{View}, \textit{Image} oder \textit{NetInfo}, die korrespondierende Native Komponenten besitzen.
-Die Bridge ist für die Kommunikation zwischen Native Module und JS-Umgebung verantwortlich.
-Sie erhält von ersterem Events wie Toucheingaben oder Netzwerkanfragen und vom Native Module Anweisungen für das \ac{ui} oder \acp{api}.
+Die Bridge ist für die Kommunikation zwischen JS-Umgebung und Native Module verantwortlich.
+Sie erhält von letzterem Events wie Toucheingaben oder Netzwerkanfragen und vom JS Module Anweisungen für das \ac{ui} oder \acp{api}.
 Der Austausch findet dabei asynchron über \ac{json} statt.
-Der letzte Teil der Architektur ist das Native Module.
-Dies ist die Anwendung, die der Nutzer verwendet \cite{Behrends.2018}.
+Der letzte Teil der Architektur ist das Native Module, welches dem Nutzer als \ac{ui} zur Verfügung \cite{Behrends.2018}.\\
 Es handelt sich somit bei Apps, welche mit React Native programmiert wurden, nicht um hybride Apps, da sie nicht nur in einem Native Container gerendert werden, sondern tatsächlich auf native Schnittstellen zugreifen.
-Die Entwicklung solcher Apps ist dennoch plattformunabhängig, da die Implementierung in JavaScript erfolgt und die Umwandlung erst zur Laufzeit geschieht.
-React Native Applikationen lassen sich dadurch schwierig in die bereits erklärten Kategorien von mobilen Anwendungen einordnen.%Siehe Seite 4 Behrends
+Die Entwicklung solcher Apps ist dennoch plattformunabhängig, da die Implementierung in JavaScript erfolgt und die Kommunikation mit nativen Schnittstellen erst zur Laufzeit geschieht.
 
 Zur Nutzung von React Native Apps benötigt das Gerät mindestens iOS 11.0 oder Android 5.0 \cite{Facebook.d}.
-Genau wie andere Native Apps können sie in den plattform-spezifischen App Store veröffentlicht und dort vom Nutzer heruntergeladen, installiert und aktualisiert werden.
+Genau wie andere Native Apps können sie in den plattformspezifischen App Store veröffentlicht und dort vom Nutzer heruntergeladen, installiert und aktualisiert werden.
 Dabei ist der benötigte Signing-Prozess derselbe wie bei Native Applikationen.
 
 Zur Implementierung von Komponenten und Funktionalitäten in React Native gibt es mehrere Optionen.
@@ -275,5 +272,3 @@ Unter \url{https://reactnative.directory/} sind diese Bibliotheken auffindbar un
 Die letzte Option ist es, Native Modules selbstständig zu programmieren.
 Das bedeutet, dass eine \textit{Bridge} zwischen React Native und der nativen Komponete implementiert werden soll, wodurch diese zur Laufzeit mit JavaScript angesprochen werden kann.
 Somit ist es generell möglich alles was eine native Anwendung kann, auch in React Native umzusetzen.
- 
-% Erklärung RN: 2 threads: main thread und js thread. js theard sagt dem th über json, was es tun soll, mt hat ein riesen switch case, was die möglichen anfragen von jst beinhaltet und das dort dann den korrespondierenden java / objective-c code durchführt. theoretisch noch den diffing thread mit shadow dom, der dasselbe macht wie diffing in react. Hilft bei der Performance

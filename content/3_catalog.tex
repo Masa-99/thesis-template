@@ -1,6 +1,5 @@
 \chapter{Kriterienkatalog zum Vergleich der Technologien}\label{ch:catalog}
-Nach der Erläuterung der Grundlagen, soll nun auf die Kriterien eingegangen werden, nach denen die Technologien im Verlauf der Arbeit verglichen werden.
-Diese sind Funktionalität, Kompatibilität und Entwicklungsaufwand der Anwendung.
+Nach der Erläuterung der Grundlagen wird nun auf die Kriterien eingegangen, mithilfe denen die Technologien im Verlauf der Arbeit verglichen werden: Funktionalität, Kompatibilität mit verschiedenen Betriebssystemen und Entwicklungsaufwand der Anwendung.
 
 Als Reaktion auf die Coronakrise soll eine App programmiert werden, die zur Darstellung und Durchsuchung der aktuellen COVID-19 Fallzahlen dient.
 Dabei soll diese installierbar sein und auch bei schlechter oder fehlender Internetverbindung funktionieren.
@@ -9,18 +8,19 @@ Zuletzt soll es dem Nutzer möglich sein, Benachrichtigungen zur aktuellen Lage 
 
 Anhand von Punkten wird die Erfüllung der Kriterien bemessen und zuletzt ausgewertet.
 Dabei erfolgt bewusst ein Verzicht auf eine Gewichtung der Kriterien.
-Der Grund hierfür ist, dass in diesem Anwendungsfall sowohl die Funktionalität als auch die Kompatibilität und der Entwicklungsaufwand von gleicher Bedeutung sind.
+Der Grund hierfür ist, dass es sich in der vorliegenden Arbeit um einen Vergleich der Technologien handelt und deshalb alle Kriterien gleichbedeutend sind.
 
 \section{Funktionalitäten}
 Applikationen werden entwickelt, um Nutzern einen Mehrwert in ihrem Alltag zu bieten.
 Je mehr Funktionalität eine Anwendung unterstützt, desto mehr Nutzen kann sie bieten.
 Egal ob in der Web- oder Appentwicklung, wenn die Anwendung keinen Mehrwert bietet, wird sie nicht verwendet und wird dadurch vom Markt verdrängt.
-Im Folgenden werden diejenigen Funktionalitäten von Apps vorgestellt, die für den Vergleich ausgewählt wurden.
+
+Im Folgenden werden diejenigen Funktionalitäten von mobilen Anwendungen vorgestellt, die für den Vergleich ausgewählt wurden.
 
 \subsection{Installation}
 \subparagraph{Beschreibung\\}
 Die Apps, die der Nutzer oft verwendet, sollten schnell erreichbar sein.
-Eine Installation wird daher in vielen Fällen bevorzugt und stellt eine grundlegende Funktion von mobilen Applikationen dar.
+Eine Installation wird daher in vielen Fällen bevorzugt und stellt eine grundlegende Funktion von mobilen Anwendungen dar.\\
 Für das verwendete Gerät bedeutet das Installieren, dass es Kapazität seines Speichers der Applikation zur Verfügung stellen muss.
 Das ist dahingehend erwähnenswert, dass einige Nutzer auf das Installieren der App verzichten müssen, wenn ihnen unzureichend Speicherplatz zur Verfügung steht.
 
@@ -28,7 +28,7 @@ Falls nun Aktualisierungen des Herstellers verfügbar sind, möchte der Nutzer d
 Dadurch können beispielsweise vorherige Fehler in der App bereinigt oder neue Funktionalität ermöglicht werden.
 
 \subparagraph{Kriterium\\}
-Mit diesem Kriterium soll geprüft werden, ob die Anwendung installiert werden kann oder muss.
+Mit diesem Kriterium soll geprüft werden, ob die Anwendung zur Nutzung installiert werden kann oder muss.
 
 \begin{itemize}
 \item 0 Punkte: Die Nutzung der Anwendung ist abhängig von deren Installation.
@@ -38,14 +38,14 @@ Mit diesem Kriterium soll geprüft werden, ob die Anwendung installiert werden k
 \subsection{Offlinebetrieb}
 \subparagraph{Beschreibung\\}
 Eine wichtige Funktion von mobilen Anwendungen ist der Offlinebetrieb.
-Das bedeutet, dass die Anwendung auch ohne oder unter schlechter Internetverbindung verwenden werden kann.
-Dabei muss natürlich unterschieden werden zwischen Anwendungen, die generell keinen Zugriff auf das Internet benötigen und jenen, die ihre Funktionalität im Offlinebetrieb einschränken müssen.
-Meistens bieten Applikationen eine Mischung aus beiden Optionen an.
-Um aus technischer Sicht eine Unabhängigkeit von der Netzwerkverbindung zu schaffen, müssen Daten lokal im Speicher des Geräts abgelegt werden.
-Das ermöglicht dem Nutzer, seine Daten jederzeit verfügbar zu haben und somit Abhängigkeiten von äußeren Umständen zu minimieren.
-Vorteilhaft für den Nutzer ist dabei auch, wenn die Prozesse, die im Offlinebetrieb angestoßen wurden, gehalten werden, bis das Gerät wieder eine stabile Internetverbindung hat.
+Das bedeutet, dass die Anwendung auch ohne oder unter schlechter Internetverbindung verwenden werden kann.\\
+Dabei muss unterschieden werden zwischen Anwendungen, die generell keinen Zugriff auf das Internet benötigen und jenen, die ihre Funktionalität im Offlinebetrieb einschränken.
+Vorteil von letzterem ist auch, wenn die Prozesse, die im Offlinebetrieb angestoßen wurden, gehalten werden können, bis das Gerät wieder eine stabile Internetverbindung besitzt.
 Auf diesem Wege wird gewährleistet, dass jegliche Aktivitäten erfolgreich durchgeführt werden.
-Nachteil des Abspeicherns der Daten ist zum einen erhöhten Speicherverbrauch und bei einer großen Anzahl auch eine Steigerung des Batterieverbrauchs.
+Meistens bieten Applikationen eine Mischung aus beiden Optionen an.
+
+Um aus technischer Sicht eine Unabhängigkeit von der Netzwerkverbindung zu schaffen, müssen Daten lokal in einem Speicher des Geräts abgelegt werden.
+Das ermöglicht dem Nutzer, seine Daten jederzeit verfügbar zu haben und somit Abhängigkeiten von äußeren Umständen zu minimieren.
 
 \subparagraph{Kriterium\\}
 Dieses Kriterium soll prüfen, ob die Anwendung auch mit fehlender Netzwerkverbindung lauffähig ist.
@@ -60,14 +60,13 @@ Dieses Kriterium soll prüfen, ob die Anwendung auch mit fehlender Netzwerkverbi
 Um mobile Anwendungen auf die eigenen Bedürfnisse anzupassen, ist der Standortzugriff eine Option.
 Dabei greift die Anwendung unter anderem durch das \ac{gps} auf den Standort des Nutzers zu und kann diesen weiterverarbeiten, um standortabhängige Informationen darzustellen.
 Der Zugriff bezieht sie dabei auf den aktuellen Standort sowie auf Bewegungen des Nutzers.
-Meist muss bereits während des Installationsprozesses der Applikation die Zustimmung des Nutzers für das Nutzen von standortbezogenen Inhalten eingeholt werden.
+Meist muss bereits während des Installationsprozesses der Applikation die Zustimmung des Nutzers für die Verwendung von standortbezogenen Inhalten eingeholt werden.
 Wird dies genehmigt, ist es der Anwendung auch möglich, im Hintergrund auf \ac{gps}-Daten zuzugreifen.
 
 Gängige Anwendungsfälle sind die Abfrage des Standorts für Wetterinformationen, Navigation oder die Anzeige von Dienstleistungen in der Nähe des aktuellen Standorts.
 
 \subparagraph{Kriterium\\}
-Das Kriterium hier ist, ob die Anwendungen Zugriff auf den Standort des Nutzers besitzen.
-%Außerdem ist von Bedeutung, ob und wie die Informationen mit der App weiterverarbeitet werden können und wie akkurat die Daten sind. 
+Dieses Kriterium betrachtet, ob die Anwendung Zugriff auf den Standort des Nutzers besitzt und diesen weiterverarbeiten kann.
 
 \begin{itemize}
 \item 0 Punkte: Die Anwendung besitzt keinen Zugriff auf den Standort des Nutzers.
@@ -81,10 +80,10 @@ Ein weiterer Zugriff auf native Schnittstellen eines mobilen Endgeräts bieten d
 Diese sind meist auf dem Gerät oder dem verknüpften Google oder Apple Konto hinterlegt.
 Sie können neben Bild, Name und Telefonnummer auch andere Kontaktdaten wie Anschriften oder E-Mail-Adressen beinhalten.
 
-In vielen Messaging Apps wie WhatsApp, Telegram oder Kik Messenger werden diese Daten verarbeitet, um dem Nutzer die Möglichkeit zu geben, seine Kontakte abgesehen von SMS oder Anrufen zu kontaktieren.
+In vielen Nachrichtenübermittlungsspps wie WhatsApp, Telegram oder Kik Messenger werden diese Daten verarbeitet, um dem Nutzer die Möglichkeit zu geben, seine Kontakte abgesehen von SMS oder Anrufen zu kontaktieren.
 
 \subparagraph{Kriterium\\}
-Das Kriterium prüft, ob die Anwendung Zugriff auf die Kontaktliste des Nutzers erhalten kann, um Kontaktdaten weiterzuverarbeiten.
+Das Kriterium untersucht, ob die Anwendung Zugriff auf die Kontaktliste des Nutzers erhalten kann, um Kontaktdaten weiterzuverarbeiten.
 
 \begin{itemize}
 \item 0 Punkte: Die Anwendung besitzt keinen Zugriff auf die Kontakte des Endgeräts.
@@ -94,16 +93,19 @@ Das Kriterium prüft, ob die Anwendung Zugriff auf die Kontaktliste des Nutzers 
 
 \subsection{Benachrichtigung}
 \subparagraph{Beschreibung\\}
-Neben dem Kontaktzugriff spielen auch Benachrichtigungen eine große Rolle bei der Interaktion mit Nutzern.
+Benachrichtigungen sind heutzutage Bestandteil jeder App und spielen eine große Rolle bei der Interaktion mit den Nutzern.
 Sie lassen sich aus technischer Sicht in zwei Kategorien unterteilen: nicht-persistente und persistent Benachrichtigungen.
 Sie unterscheiden sich darin, dass erstere nur erscheinen, wenn die Anwendung in dem Moment in Benutzung ist, wohingegen das Empfangen von persistenten Benachrichtigungen jederzeit erfolgen kann.
 Letztere können entweder von der Anwendung selbst oder von einem Server ausgelöst werden und werden deshalb auch als Push Benachrichtigungen bezeichnet.
-Beide Fälle bieten den Vorteil, dass die Nutzer immer wieder auf die Anwendung aufmerksam werden und sie somit motiviert sind, diese öfters zu nutzen.
-Wichtig ist hierbei die Zahl der Benachrichtigungen pro Tag oder Woche zu planen.
-Denn wenn der Nutzer zu viele Nachrichten erhält, kann das als störend empfunden werden und zur Deaktivierung der Benachrichtigungen oder im schlimmsten Fall zur Deinstallation der Anwendung führen.
-Push Benachrichtigung können kurze Informationen durch Texte, Bilder oder Buttons beinhalten.
-Letzteres ist besonders wichtig, da der Nutzer darüber aus dem Menü heraus mit der Anwendung interagieren und auch auf diese weitergeleitet werden kann.
-Außerdem könnten sie Benachrichtigungstöne auslösen oder dem Icon der Anwendung ein Badge\footnote{Badges sind kleine Anzeigen am rechten oberen Rand des App Icons. An ihnen erkennt man die Anzahl an ungeöffneten Benachrichtigungen.} anheften.
+
+%Beide Fälle bieten den Vorteil, dass die Nutzer immer wieder auf die Anwendung aufmerksam werden und sie somit motiviert sind, diese öfters zu nutzen.
+%Wichtig ist hierbei die Zahl der Benachrichtigungen pro Tag oder Woche zu planen.
+%Denn wenn der Nutzer zu viele Nachrichten erhält, kann das als störend empfunden werden und zur Deaktivierung der Benachrichtigungen oder im schlimmsten Fall zur Deinstallation der Anwendung führen.
+
+Benachrichtigung können kurze Informationen durch Texte, Bilder oder Buttons beinhalten.
+Letzteres ist besonders wichtig, da der Nutzer bei Push Benachrichtigungen über Buttons aus dem Menü heraus mit der Anwendung interagieren und auch auf diese weitergeleitet werden kann.
+
+Außerdem könnten Benachrichtigungen Töne auslösen, um auf sich aufmerksam zu machen, oder dem Icon der Anwendung ein Badge\footnote{Badges sind kleine Anzeigen am rechten oberen Rand des App Icons. An ihnen erkennt man die Anzahl an ungeöffneten Benachrichtigungen.} anheften.
 
 Konkrete Beispiele für Inhalte von Benachrichtigungen sind aktuelle WhatsApp Nachrichten, neue Freundschaftsanfragen auf Facebook oder neue Suchergebnisse für die gespeicherte Ebay-Kleinanzeigen-Suche.
 
@@ -120,8 +122,8 @@ Dies sollte auch funktionieren, ohne dass die Anwendung im Vorder- oder Hintergr
 \section{Kompatibilität mit verschiedenen Betriebssystemen}
 \subparagraph{Beschreibung\\}
 Durch die Vielzahl von Betriebssystemen und Geräten ist es aufwendig, Anwendungen zu implementieren, die überall im selben Maße lauffähig sind.
-Projektleiter und Entwickler müssen deshalb im Voraus genau abwägen, auf welchen Systemen die Applikation verfügbar sein soll.
-Hierbei kommt es bei Webanwendungen nicht nur auf das Betriebssystem und dessen Version, sondern auch auf den verwendeten Browser und dessen Version an.
+Projektleiter und Entwickler müssen deshalb im Voraus genau abwägen, auf welchen Systemen die Applikation verfügbar sein soll.\\
+Hierbei kommt es bei Webanwendungen nicht nur auf das Betriebssystem, sondern auch auf den verwendeten Browser und dessen Version an.
 Bei Android Geräten ist das vorinstallierte Browser Chrome und bei iOS Safari.
 Auf welchen Geräten und Browsern die Anwendungen unterstützt werden sollen, wirkt sich außerdem direkt auf den Entwicklungsaufwand aus.
 
@@ -134,27 +136,24 @@ Dabei ist ausschlaggebend, wie viele der bereits definierten Funktionalitäten a
 \item 1 Punkt: Die Funktionalitäten der Anwendung sind mit einem Betriebssystem kompatibel und unabhängig vom Browser.
 \item 2 Punkte: Die Funktionalitäten der Anwendung sind mit mehreren Betriebssystemen kompatibel und abhängig vom Browser.
 \item 3 Punkte: Die Funktionalitäten der Anwendung sind mit mehreren Betriebssystemen kompatibel und unabhängig vom Browser.
-
-\item 0 Punkte: Die Funktionalitäten der Anwendung stehen keinem Betriebssystem zur Verfügung.
-\item 1 Punkt: Die Funktionalitäten der Anwendung stehen einem Betriebssystem zur Verfügung.
-\item 2 Punkte: Die Funktionalitäten der Anwendung stehen beiden Betriebssystemen zur Verfügung.
 \end{itemize}
 
 \section{Entwicklungsaufwand}
 \subparagraph{Beschreibung\\}
-Bei der Implementierung von Anwendungen, egal ob für das Web oder mobile Endgeräten, lassen sich aus dem Entwicklungsaufwand deren Kosten berechnen.
-Dabei fließen außerdem der Entwicklungszeitraum, Fähigkeiten des Teams und der Funktionsumfang in die Kalkulation ein.
-Wichtig ist, wie bereits angemerkt, auch die Kompatibilität mit verschiedenen Endgeräten.
-Den je mehr Geräte unterstützt werden sollen, desto aufwendiger und somit kostenlastiger ist meist die Implementierung.
+Bei der Implementierung von Anwendungen, egal ob für das Web oder für mobile Endgeräte, ist der Aufwand der Entwicklung ein maßgebender Faktor für resultierende Kosten.
+Dabei fließen außerdem der Entwicklungszeitraum, die Fähigkeiten des Teams und der Funktionsumfang in die Kalkulation ein.
+Wichtig ist, wie im vorherigen Kriterium angemerkt, auch die Kompatibilität mit verschiedenen Endgeräten.
+Denn je mehr Geräte unterstützt werden sollen, desto aufwendiger und somit kostspieliger ist meist die Implementierung.
 
 Wird jedoch zur Entwicklung ein plattformunabhängiger Ansatz gewählt, kann das bereits den Entwicklungsaufwand reduzieren.
 Gerade wenn schnell reagiert werden soll -- zum Beispiel in der COVID-19-Krise -- ist es praktisch, wenn die Entwicklung möglichst effizient und die Anwendung auf vielen Geräten lauffähig ist, um ihre Nutzer effektiv zu unterstützen.
+
 \acp{pwa} sind generell plattformübergreifend, da sie im Browser geöffnet werden.
 Bei nativen Apps wird die Plattformunabhängigkeit durch Frameworks wie React Native ermöglicht.
 Dennoch besteht bei beiden Ansätzen die Möglichkeit, dass zur Unterstützung von bestimmten, geforderten Betriebssystemen(-versionen) oder Browsern ein zusätzlicher Entwicklungsaufwand entsteht.
 
 \subparagraph{Kriterium\\}
-Auf Basis der bereits genannten Kriterien, soll hierbei gemessen werden, wie lange für die Implementierung dieser benötigt wird.
+Auf Basis der bereits genannten Kriterien soll in diesem Kriterium gemessen werden, wie viel Zeit für deren Implementierung benötigt wird.
 Dabei soll einerseits die Zeit zur Einarbeitung in die verschiedenen Technologien betrachtet werden sowie die tatsächliche Zeit, die zum Programmieren der Funktionalität benötigt wird.
 
 \begin{itemize}

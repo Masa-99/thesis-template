@@ -7,10 +7,11 @@ Anhand dieses Anwendungsfalles wurde analysiert, welche Vor- und Nachteile das E
 
 Dabei hat sich herausgestellt, dass \acp{pwa} mittlerweile viele Funktionalitäten von nativen Anwendungen wie Installierbarkeit, Offlinebetrieb, Standortzugriff, Kontaktzugriff und Benachrichtigungen umsetzen können und deshalb gerade für unkomplizierte Anwendungen eine Alternative bieten.
 Besonders attraktiv für Unternehmen ist dabei, dass es sich generell um eine für den Entwickler und Nutzer plattformunabhängige Lösung handelt, wodurch Ressourcen gespart werden können.
-Außerdem ist der Entwicklungsaufwand der \textit{pwa} geringer als der einer nativen Anwendung.\\
+Außerdem ist der Entwicklungsaufwand der \textit{pwa} geringer als der einer nativen Anwendung.
+
 Dennoch ist ein entscheidender Faktor für die Etablierung von \acp{pwa} die fehlende Unterstützung durch iOS, da dadurch 26,34 Prozent des weltweiten Marktanteils von mobilen Betriebssystemen weniger Funktionalitäten zur Verfügung stehen \cite{ODea.2021}.
 Dies betrifft wie in der Arbeit dargestellt die Push \ac{api} und Notification \ac{api}, ferner aber auch den Zugriff auf Bluetooth oder die Badging \ac{api}.
-Doch in Anbetracht der Webschnittstellen, die sich seit dem Aufschwung von \acp{pwa} 2015 entwickelt haben, wird deutlich, dass die Zukunft von mobilen Anwendungen vielfältig ist.
+Doch in Anbetracht der Vielzahl von Webschnittstellen, die sich seit dem Aufschwung von \acp{pwa} 2015 entwickelt haben, wird deutlich, dass die Zukunft von mobilen Anwendungen vielfältig ist.
 
 \section{Ausblick}
 %Die Ergebnisse legen zudem zusammenfassend nahe, dass eine Entscheidung für eine der beiden Implementationen abhängig von den Anforderungen an die zu entwickelnde App getroffen werden sollte.
@@ -18,7 +19,7 @@ Doch in Anbetracht der Webschnittstellen, die sich seit dem Aufschwung von \acp{
 Für anknüpfende Arbeiten könnten die Analyse von \acp{pwa} und React Native Apps intensiviert werden, indem umfassender auf die verschiedenen Funktionalitäten eingegangen wird, die mit diesen beiden Vorgehensweisen umsetzbar sind.
 Beispiele hierfür sind die Einbindung der Background Sync \ac{api}, Payment Request \ac{api} oder Web Share Target \ac{api}.
 
-Interessant wäre außerdem noch ein Performance Vergleich.
+Interessant wäre außerdem ein Performance Vergleich der zwei Technologien.
 Da die für diese Arbeit implementierte Anwendung lediglich aus einer Seite mit Daten einer externen Schnittstelle besteht, hat sich der Vergleich nicht angeboten.
 Anders sieht das jedoch bei größeren Anwendungen aus, welche eine Vielzahl von Bildern, Videos und Einträgen nutzen und verwalten wie Twitter oder Pinterest.
 Auch die Ansprache der Schnittstellen eines mobilen Endgeräts sind unter dem Aspekt der Performance zu betrachten, denn dies geschieht performanter mit der betriebssystemspezifischen Programmiersprache.

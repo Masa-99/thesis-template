@@ -97,8 +97,9 @@
 % configure your listings style
 \usepackage{listings}
 \lstset{
-	tabsize=3,
+	tabsize=2,
 	extendedchars=true,
+	aboveskip=2em,
 	frame=single,
 	showstringspaces=false,
 	numbers=left,
@@ -131,10 +132,6 @@
 \acrodefplural{sdk}[SDKs]{Software development kits}
 \acrodefplural{spa}[SPAs]{Single-Page Applications}
 \acrodefplural{api}[APIs]{Application Programming Interfaces}
-
-% load glossary entries
-%\makenoidxglossaries
-%\loadglsentries{glossary}
 
 \begin{document}
 
@@ -171,13 +168,10 @@
 \include{content/4_implementation}
 \include{content/5_results}
 \include{content/6_summary}
-% remove if not needed
-%\appendix
-%\include{content/a1_supplemental}
 
 \backmatter
 
-\bibliographystyle{ieeetr}
-\bibliography{literature}
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,literature}
 
 \end{document}

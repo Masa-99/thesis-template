@@ -63,7 +63,6 @@ Obwohl \text{localhost} kein \ac{https} besitzt, sind die Funktionalitäten von 
 Zum Erhalten der Daten wird mit der \textit{Fetch}-Funktion eine \textit{GET}-Anfrage an die \ac{api} der Corona-Datenbank des Robert Koch-Instituts versendet und die Antwort in ein \textit{Array} gespeichert.
 Dieses wird in der \textit{render}-Funktion mithilfe der \textit{Array}-Funktion \textit{map} durchlaufen.
 Die Daten werden somit im \ac{ui} übersichtlich dargestellt.
-%Bild der minimalen Ansicht
 
 Generell müssen Webanwendungen auf einen Webserver veröffentlicht werden, um im World Wide Web aufrufbar zu sein.
 Speziell bei \acp{pwa} ist hierbei bedeutsam, dass dieser Webserver eine verschlüsselte Verbindung mittels \ac{https} aufbaut, da dies eine technische Voraussetzung für \acp{pwa} ist.
@@ -78,7 +77,7 @@ Diese läuft mit der zugehörigen Expo Go iOS oder Android App, indem die progra
 Somit kann die App sofort ohne weiteres auf dem jeweiligen Endgerät unabhängig vom Betriebssystem getestet werden.\\
 Der Nachteil dieses Ansatzes ist, dass mit Expo kein nativer Code für die genannten Betriebssysteme programmiert werden kann und dadurch die Funktionalitäten auf die von Expo angebotenen \ac{api}s beschränkt sind.
 Für die Funktionen, die in dieser Arbeit betrachtet werden, würde Expo ausreichen, jedoch soll an dieser Stelle kein weiteres Framework genutzt werden.
-Deshalb wird der \textit{bare workflow} verwendet.
+Deshalb wird der \textit{bare workflow} verwendet.\\
 %Auch hier kann mit JavaScipt (oder TypeScript falls gewünscht) programmiert werden, zusätzlich besteht aber auch die Möglichkeit nativen Code zu implementieren.
 Doch auch dieser Ansatz besitzt einen Nachteil.
 Denn trotz der eigentlich plattformunabhängigen Entwicklungsweise besteht keine Möglichkeit, mit Windows oder Linux eine iOS App zu programmieren.
@@ -122,16 +121,14 @@ In der Abbildung \ref{fig:flatlist:ios} wird deutlich, welche Auswirkung das Feh
 
 Damit auf gewisse Funktionalitäten des Geräts zuzugreifen werden kann, benötigten Anwendungen teilweise die Erlaubnis des Nutzers.
 Android unterscheidet dabei zwischen \glqq normal\grqq{} und \glqq dangerous\grqq{} \textit{Permissions}.
-Beispiele für letzteres sind die \textit{android.permission.ACCESS\_""FINE\_LOCATION} oder \textit{android.permission.READ\_CONTACTS}.
+Beispiele für letzteres sind die \textit{android.permission.ACCESS\_""FINE\_LOCATION} oder \textit{android.permission.READ\_CONTA""CTS}.
 Alle anderen \textit{Permissions} werden aus dem AndroidManifest.xml generiert.\\
-Bei iOS Apps werden die benötigten Berechtigungen der App in XCode festgelegt und beim Installationsprozess abgefragt.
+Bei iOS Apps werden die benötigten Berechtigungen der App in XCode\footnote{Die \ac{ide} zur Entwicklung von iOS Anwendungen.} festgelegt und beim Installationsprozess abgefragt.
 Nur wenn der Nutzer diese Berechtigungen akzeptiert, kann die Anwendung installiert werden.
 Daher wird in der App für die Nutzung von Funktionalitäten wie Standort- oder Kontaktzugriff keine zusätzliche Erlaubnis des Nutzers benötigt.
 
-\section{Installation und Aktualisierungen}
-
+\section{Installation}
 Das Ziel dieser Funktionalität ist es, dass die Anwendung auf das mobile Endgerät des Nutzers installiert werden kann.
-Dadurch soll er schneller Zugriff ermöglicht werden.
 
 \subparagraph{Progressive Web App\\}
 Um eine Webanwendung installierbar zu machen, benötigt sie ein App Manifest und \textit{HTTPS}.
@@ -151,7 +148,7 @@ Durch die Angabe einer \textit{background\_color} erhält die Anwendung eine Hin
 Diese wird angezeigt, bis Stylingsheets oder Hintergrundbilder der PWA geladen sind.
 Das \textit{icons}-Attribut besitzt ein Array aus Objekten, welche die Dateipfade der Icons in verschiedenen Größen angeben.
 Die \textit{start\_url} gibt die relativen \ac{url} an, die beim Starten der installierten Anwendung geöffnet werden soll \cite{MDNcontributors.d}.\\
-Das Manifest wird per \glqq <link>\grqq{}-Tag in die index.html eingebunden und dessen Informationen sind danach auch im Application-Tab der Google Developer Tools einsehbar \cite{Caceres.2021}.\\
+Das Manifest wird per \glqq <link>\grqq{}-Tag in die index.html eingebunden und dessen Informationen sind danach auch im Application-Tab der Google Developer Tools einsehbar \cite{Caceres.2021}.
 
 \begin{lstlisting}[language=Java,caption={Fertiges App Manifest der PWA},captionpos=b,label={lst:manifest}]
 {
@@ -180,14 +177,15 @@ Das Manifest wird per \glqq <link>\grqq{}-Tag in die index.html eingebunden und 
 \end{lstlisting}
 
 Wichtig ist dabei, dass das Manifest als experimentell markiert ist, da es nicht von allen mobilen Browsern und Betriebssystemen komplett unterstützt wird.
-Aktuell betrifft das Safari, welches das Installieren aus Browsern, die auf iOS statt mit ihrem eigenen HTML-Renderer mit WebKit\footnote{HTML-Renderer von Safari.} laufen (Chrome, Firefox und Opera), nicht unterstützt \cite{o.V..}.
+Aktuell betrifft das Safari, welches das Installieren aus Browsern, die auf iOS statt mit ihrem eigenen HTML-Renderer mit WebKit\footnote{HTML-Renderer von Safari.} laufen (Chrome, Firefox und Opera), nicht unterstützt \cite{Deveria.o.J.}.
 Denn jede iOS App muss laut Punkt 2.5.6 der Apple App Store Review Guidelines als Engine WebKit nutzen \cite{Apple.07.06.2021}.
+
 Wenn der Nutzer nun die Anwendung im Browser aufruft, kann er sie auf browserabhängige Weise installieren und somit mit einem Klick vom Startbildschirm oder App-Drawer aus öffnen.
 Beim Aufrufen der Seite, öffnet sich im Chrome Browser auf Android außerdem eine Installationsaufforderung für die App am unteren Bildschirmrand.
 Diese zusätzliche Funktionalität muss aktuell für den Safari Browser explizit implementiert werden.
 
 Für das Ermöglichen von Aktualisierungen der \ac{pwa} muss keine weitere Programmierung vorgenommen werden.
-Sobald ein neues Deployment der Anwendung vorgenommen wird, ist sie automatisch auf dem neusten Stand, selbst wenn die \ac{pwa} installiert ist.
+Sobald ein neues Deployment\footnote{Veröffentlichung der Webseite.} der Anwendung vorgenommen wird, ist sie automatisch auf dem neusten Stand, selbst wenn die \ac{pwa} installiert ist.
 
 \subparagraph{React Native App\\}
 Zur Ermöglichung der Installation einer React Native App bedarf es keiner konkreten Implementierung.
@@ -204,7 +202,6 @@ Bereits bei der Installation durch den Play Store wird dabei nach Berechtigungen
 Bei iOS Apps ist das die \textit{Info.plist}-Datei.
 
 \section{Offlinebetrieb}
-
 Die Anwendung soll auch ohne Internetverbindung aufrufbar, mit Daten gefüllt und die Funktion des Durchsuchens nutzbar sein.
 
 \subparagraph{Progressive Web App\\}
@@ -269,7 +266,7 @@ Der Grund dafür ist, dass das Rendern der App nicht abhängig von einer Netzwer
 Dennoch ist es sinnvoll, auch hier eine lokale Speicherung der Corona-Daten vorzunehmen, um diese trotz Offlinebetriebs anzeigen zu können.
 
 Seit React Native Version 0.59 sind einige Komponenten als veraltet deklariert.
-Das betrifft unter anderem \textit{AsyncStorage} und \textit{NetInfo}.
+Das betrifft unter anderem \textit{AsyncStorage}\footnote{https://github.com/react-native-async-storage/async-storage} und \textit{NetInfo}\footnote{https://github.com/react-native-netinfo/react-native-netinfo}.
 Sie wurden jedoch nicht entfernt, sondern lediglich aus der Kernbibliothek react-native exkludiert und in jeweils eigene Bibliotheken mit eigenen Verantwortlichen verschoben \cite{Turner.2019}.
 Diese Bibliotheken sind dem GitHub Repository @react-native-community zu finden und benötigen nach der Installation per npm auch das React Native-spezifische \textit{Linkings}\footnote{Ein Prozess bei dem diejenigen nativen Fähigkeiten, die von einer Bibliothek benötigt werden, der Anwendung hinzugefügt werden. Durch diesen zusätzlichen Schritt verringert sich die Größe der Basis Anwendungen, die eventuell keine nativen Funktionalitäten benötigt.}.
 
@@ -295,7 +292,6 @@ Zum Testen des Offlinebetriebs muss nun das Internet des Rechners, auf dem der E
 Dadurch wird nachgewiesen, dass die Anwendung trotz fehlender Netzwerkverbindung, die im \textit{AsyncStorage}-gespeicherten Corona-Daten anzeigen kann.
 
 \section{Standortzugriff}
-
 Anhand des Standorts soll der Nutzer die Liste der Landkreise nach dem Landkreis filtern, in dem er sich aktuell befindet.
 
 \subparagraph{Progressive Web App\\}
@@ -317,22 +313,19 @@ Sobald diese erteilt ist, wird die Methode \textit{Navigator.getCurrentPosition(
 Der Wert des \textit{input}-Feldes wird dann auf den ermittelten Landkreis gesetzt und die Liste der Landkreise automatisch nach dieser gefiltert.
 
 \subparagraph{React Native App\\}
-Zur Implementierung des Standortzugriffs in React Native wird die Community Lösung \textit{react-native-geolocation-service} verwendet, welche nach Aussage des Erstellers für Android und iOS programmiert ist.
+Zur Implementierung des Standortzugriffs in React Native wird die Community Lösung \textit{react-native-geolocation-service}\footnote{https://github.com/Agontuk/react-native-geolocation-service} verwendet, welche nach Aussage des Erstellers für Android und iOS programmiert ist.
 Diese greift über eine \textit{Bridge} auf diejenigen Schnittstellen zu, die in Android und in iOS verantwortlich für den Standort sind.
-In Android wird speziell wegen eines Timeout-Problems nicht auf die übliche \textit{Geocoder}-Klasse zugegriffen, sondern auf die \textit{FusedLocationProviderClient} \ac{api} des Google Play Services. %Quelle
-%Die korrespondieren Klasse, die in iOS der Standortzugriff ermöglicht, nennt sich \textit{RCTGeolocation}.
-%Über eine \textit{Bridge} wird die Kommunikation zwischen \textit{Main Thread} und \textit{JS Thread} gehandhabt.
-In iOS spricht die \textit{Bridge} den \textit{CLLocationMangager} des \textit{CoreLocation}-Modules an.
+In Android wird speziell wegen eines Timeout-Problems nicht auf die übliche \textit{Geocoder}-Klasse zugegriffen, sondern auf die \textit{FusedLocationProviderClient} \ac{api} des Google Play Services.
+In iOS spricht die \textit{Bridge} den \textit{CLLocationMangager} des \textit{CoreLocation}-Modules an \cite{Agontuk.26.06.2021}.
 
-Nach dem Installieren der Bibliothek muss für Android das Codefragment \textit{<uses-permission android:name="android.permission.ACCESS\_FINE\_LOCATION"/>} in der AndroidManifest.xml hinzugefügt werden.
+Nach dem Installieren der Bibliothek muss für Android das Codefragment \textit{<uses-permi""ssion android:name=\"android.permission.ACCESS\_FINE\_LOCATION\"/>} in der AndroidManifest.xml hinzugefügt werden.
 Das erlaubt der Anwendung auf den Standort zuzugreifen, wenn die App benutzt wird.
-%für iOS zusätzlich der Wert \textit{NSLocationWhenInUseUsageDescription} in der Info.plist-Datei gesetzt werden.
 Da es sich beim Standortzugriff um eine \glqq dangerous\grqq{} \textit{Permission} handelt, muss zuerst der Nutzer dennoch erst eine Erlaubnis erteilen. 
 Dies geschieht mit dem Befehl \textit{PermissionAndroid.request()}.
 Für iOS wird neben dem Aktivieren des Standortzugriffs in XCode keine explizite Erlaubnis benötigt.
 
 Die Abfrage der Erlaubnis erfolgt in der \textit{Search.js} in einem \textit{Effect}, welcher beim Öffnen der Anwendung ausgelöst wird.
-Nach Zustimmung des Anwenders wird per \ac{api}-Anfrage an denselben Drittanbieter wie bei der \ac{pwa} der Name der Stadt aus den Daten über den Längen- und Breitengrad des Standorts des aktuellen Geräts erschlossen.
+Nach Zustimmung des Anwenders wird per \ac{api}-Anfrage an denselben Drittanbieter wie bei der \ac{pwa} der Name der Stadt aus den Daten über den Längen- und Breitengrad des Standorts des aktuellen Geräts erschlossen.\\
 Hierbei ist zu betonen, dass im Normalfall bei nativen Anwendungen nach der Standortbestimmung auf die betriebssystemintegrierte Reverse Geocoding Funktion (beispielsweise bei Android die Google Maps Geocoding \ac{api}) zurückgegriffen werden könnte.
 In dieser Arbeit wird jedoch wegen der dadurch anfallenden Kosten darauf verzichtet.
 
@@ -340,7 +333,6 @@ Der logische Aufbau dieser Funktionalität konnte hier von der React \ac{pwa} ü
 So nennt sich das \textit{onChange}-Event einer Texteingabe in React nun \textit{onChangeText}-Event in React Native, während das \textit{input}-HTML-Element zum \textit{TextInput}-Tag wird.
 
 \section{Kontaktzugriff}
-
 Dem Nutzer soll es möglich sein, die Liste der Landkreise nach der Adresse eines Kontakts zu filtern.
 
 \subparagraph{Progressive Web App\\}
@@ -360,7 +352,7 @@ Die Abfrage erfolgt beim Betätigen des Buttons und ist wie beim Standortzugriff
 
 Das Implementieren dieser Funktionalität gestaltet sich als problematisch, da die Contact Picker \ac{api} lediglich auf mobilen Browsern zur Verfügung steht.
 Deshalb wurde die Funktion vollständig mit dem Android Emulator programmiert.
-Dafür wird statt durch \textit{http://localhost:3000} mit der IP-Adresse auf die laufende Webanwendung zugegriffen.
+Dafür wird statt durch \url{http://localhost:3000} mit der IP-Adresse auf die laufende Webanwendung zugegriffen.
 Doch auch hier gibt es Komplikationen mit der Unterstützung des \textit{contacts}-Attribut im \textit{navigator}.
 Zuletzt hat lediglich das Deployment der \ac{pwa} geholfen, auf die Kontakte zuzugreifen.
 Grund dafür kann sein, dass die Contact Picker \ac{api} nur mit \ac{https} verfügbar ist, jedoch sollte das nicht für \textit{localhost} gelten, wie bei der Implementierung der bisherigen Funktionalitäten.
@@ -390,7 +382,7 @@ Deshalb wird hier auf die Adresszeile zugegriffen, in der zur Vereinfachung aktu
 Dieser Wert wird nach Bestätigung der Auswahl direkt in das Suchfeld übernommen und die Liste der Landkreise somit nach dieser Stadt gefiltert.
 
 \subparagraph{React Native App\\}
-Bei der React Native App wurde dies mit der Bibliothek \glqq react-native-contacts\grqq{} umgesetzt.
+Bei der React Native App wurde dies mit der Bibliothek \textit{react-native-contacts}\footnote{https://github.com/morenoh149/react-native-contacts} umgesetzt.
 Diese greift in Android auf die \textit{ContactsContract} Klasse und in iOS auf die \textit{CNContact} zu.
 
 Nach der Installation der Bibliothek müssen in der AndroidManifest-Datei erneut eine \textit{uses-permissions} ergänzt werden, in diesem Fall die \textit{android.permission.READ\_""CONTACTS}-Erlaubnis für das Lesen der Kontakte.
@@ -425,7 +417,7 @@ Dies wird zur Begrenzung des Umfangs in der Arbeit exkludiert und im Folgenden l
  \label{fig:structure_webpush}
 \end{figure}
 
-Zum besseren Verständnis der Implementierung soll zuerst das Konzept von Push umrissen werden.
+Zum besseren Verständnis der Implementierung soll zuerst das Web Push Prinzip umrissen werden.
 Der Name Push bezieht sich darauf, dass keine Aktion vom Client vorgenommen werden muss, um diese Informationen vom Server zu erhalten.
 Wie auf der rechten Seite in der Abbildung \ref{fig:structure_webpush} dargestellt, besitzt das Konzept vier Abschnitte.\\
 Die erste Station betrifft die Installation des Service Workers.
@@ -464,7 +456,7 @@ Im Service Worker wird dann im Falle eines Pushes vom Server im \textit{push}-Ev
 \textit{Firebase} ersetzt die Nutzung des \textit{push}-Events jedoch durch seine eigene \textit{messaging.setBackgroundMessageHandler()}-Funktion, in der dasselbe durchgeführt wird.
 
 Eine Besonderheit von der Nutzung des \ac{fcm} ist außerdem, dass dem App Manifest das Attribut \textit{gcm\_sender\_id} mit dem Wert der Sender ID hinzugefügt werden muss.
-Diesen steht unter den Einstellung des \textit{Firebase}-Projekts.%???
+Diesen steht unter den Einstellungen des \textit{Firebase}-Projekts.%???
 
 \subparagraph{React Native App\\}
 Der Prozess von Push Benachrichtigungen ist bei Native Apps ähnlich aufgebaut.
@@ -473,7 +465,7 @@ Bei Android Geräten werden Push Benachrichtigung von dem Google Cloud Messaging
 Native Anwendungen benötigen wie \acp{pwa} eine Internetverbindung zum Empfangen von Push Benachrichtigungen.
 
 Auch bei der React Native Applikation wird zur Vereinfachung des Prozesses das \ac{fcm} von \textit{Firebase} verwendet, zumal es \ac{apn} integriert.
-Dafür wird die Bibliothek \glqq react-native-firebase\grqq{} genutzt, die Push Benachrichtigungen an Android und iOS ermöglicht.
+Dafür wird die Bibliothek \textit{react-native-firebase}\footnote{https://github.com/invertase/react-native-firebase} genutzt, die Push Benachrichtigungen an Android und iOS ermöglicht.
 In dieser Arbeit wird jedoch nur exemplarisch auf die Einrichtung von \ac{fcm} mit iOS eingegangen.
 Die Native App greift nach erfolgreicher Einrichtung, die wie bei der \ac{pwa} abläuft, auf dieselbe Real Time Database zu wie die \ac{pwa}.
 
