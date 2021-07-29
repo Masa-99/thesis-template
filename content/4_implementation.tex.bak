@@ -1,7 +1,8 @@
 \chapter{Implementierung einer Progressive Web App und Native App}\label{ch:implementation}
 Die Daten für die zu implementierenden Applikationen werden von der offiziellen REST\footnote{Ein gängiges Datenformat des Datenaustauschs im Web.} \ac{api} des Robert Koch-Instituts bezogen.
 Sie werden täglich um Mitternacht prozessiert und sind in den frühen Morgenstunden in der \ac{api} verfügbar.
-Konkret wird die Datenbank \glqq RKI Corona Landkreise\grqq{} genutzt, die die Zahlen gruppiert nach Landkreisen im Geo\ac{json} und \ac{json}-Format zur Verfügung stellt \cite{COVID19Datenhub.2020}.\\
+Konkret wird die Datenbank \glqq RKI Corona Landkreise\grqq{} genutzt, die die Zahlen gruppiert nach Landkreisen im Geo\ac{json} und \ac{json}-Format zur Verfügung stellt.
+Sie besitzt insgesamt 2.117.948 Datensätze und als CSV-Datei eine Größe von 308 MB\cite{COVID19Datenhub.2020}.\\
 Für die Darstellung der Fallzahlen wurden hierbei folgende, auf den Landkreis bezogene, Attribute ausgewählt:
 \begin{itemize}
 \item Art des Landkreises (\textit{BEZ})
@@ -12,11 +13,10 @@ Für die Darstellung der Fallzahlen wurden hierbei folgende, auf den Landkreis b
 \item ID (\textit{AdmUnitId})
 \item Zeitpunkt der letzten Aktualisierung der Daten (\textit{last\_update})
 \end{itemize}
-%Die Größe dieser Daten beträgt 6,782.4 KiB.
-Die Fallzahlen werden in der Anwendung zum Zweck der Übersichtlichkeit auf zwei Nachkommastellen gerundet.
+In der Anwendung werden die Fallzahlen zum Zweck der Übersichtlichkeit auf zwei Nachkommastellen gerundet.
 
 Für die Implementierung der zu vergleichenden Anwendungen wurden die open-source Bibliotheken React und React Native verwendet.
-React dient bei der \ac{pwa} als Unterstützung zur Entwicklung einer \ac{spa}, wohingegen React Native eine komplettes Framework zur plattformunabhängigen Entwicklung von nativen Anwendungen anbietet.
+React dient bei der \ac{pwa} als Unterstützung zur Entwicklung einer \ac{spa}, wohingegen React Native ein komplettes Framework zur plattformunabhängigen Entwicklung von nativen Anwendungen anbietet.
 Ein Vergleich mit diesen Bibliotheken bietet sich einerseits insofern an, dass deren Grundlage dieselbe Programmierweise darstellt, nämlich das deklarative und komponentenbasierte Konzept von React.
 Anderseits sind durch die Verwendung von React Native beide Technologien plattformunabhängig und bilden somit eine solide Grundlage für den Vergleich.
 Diese Eigenheit der Implementierung unterscheidet sich insofern grundlegend von der tatsächlichen nativen Entwicklung, als dass diese nicht betriebssystemspezifisch stattfindet.
@@ -46,7 +46,6 @@ Die Abbildung \ref{fig:structure_pwa} zeigt die Ordnerstruktur nach dem Aufsetze
 \begin{figure}[h]
  \centering
  \includegraphics[width=0.6\textwidth]{figures/Structure_PWA.png}
- \quelle{Eigene Darstellung}
  \caption{Ordnerstruktur Progressive Web App}
  \label{fig:structure_pwa}
 \end{figure}
@@ -68,7 +67,7 @@ Die Daten werden somit im \ac{ui} übersichtlich dargestellt.
 
 Generell müssen Webanwendungen auf einen Webserver veröffentlicht werden, um im World Wide Web aufrufbar zu sein.
 Speziell bei \acp{pwa} ist hierbei bedeutsam, dass dieser Webserver eine verschlüsselte Verbindung mittels \ac{https} aufbaut, da dies eine technische Voraussetzung für \acp{pwa} ist.
-Zum Hosting der Webapplikation wird deshalb der Hostingservice Netlify verwendet, welcher eine \ac{https} Verbindung bereitstellt.
+Zum Hosting der Webapplikation wird deshalb der Hostingservice \textit{Netlify} verwendet, welcher eine \ac{https} Verbindung bereitstellt.
 Durch den Befehl \glqq npm run build\grqq{} kann eine minimierte Version der Anwendung erzeugt werden, die eine optimierte Endfassung für das Deployment der App bietet.
 Nach erfolgreichem Hochladen des Build Ergebnisses ist die \ac{pwa} über den Link \url{https://corona-react-pwa-ba.netlify.app/} verfügbar.
 
@@ -83,7 +82,7 @@ Deshalb wird der \textit{bare workflow} verwendet.
 %Auch hier kann mit JavaScipt (oder TypeScript falls gewünscht) programmiert werden, zusätzlich besteht aber auch die Möglichkeit nativen Code zu implementieren.
 Doch auch dieser Ansatz besitzt einen Nachteil.
 Denn trotz der eigentlich plattformunabhängigen Entwicklungsweise besteht keine Möglichkeit, mit Windows oder Linux eine iOS App zu programmieren.
-Laut der Dokumentation von React Native wird hierfür mac\ac{os} benötigt.\\
+Laut der Dokumentation von React Native wird hierfür macOS benötigt.\\
 Im Folgenden wird daher die Implementierung einer Android App mit React Native beschrieben und die Umsetzung derselben Funktionalitäten auf iOS nur skizziert.
 Wichtig ist dabei, dass aus dem vorliegenden Code trotzdem eine iOS App erzeugt werden könnte.
 Die gleiche Funktionalität wie bei der Android App ist jedoch meist nicht ohne weitere Anpassungen wie das Zulassen von Berichtigungen über Apples \ac{ide} XCode verfügbar.
@@ -97,7 +96,6 @@ Nach dem Ausführen des Befehls liegt die Ordnerstruktur vor, die in der Abbildu
  \centering
  \includegraphics[width=0.4\textwidth]{figures/Structure_RN.png}
  \caption{Ordnerstruktur React Native App}
- \quelle{Eigene Darstellung}
  \label{fig:structure_rn}
 \end{figure}
 
@@ -118,7 +116,6 @@ In der Abbildung \ref{fig:flatlist:ios} wird deutlich, welche Auswirkung das Feh
 \begin{figure}
 \subfigure[Darstellung einer \textit{FlatList} mit \textit{SafeViewArea}]{\includegraphics[width=0.49\textwidth]{figures/safeareaview.png}}
 \subfigure[Darstellung einer \textit{FlatList} ohne \textit{SafeViewArea}]{\includegraphics[width=0.49\textwidth]{figures/no_safeareaview.png}}
-\quelle{Eigene Darstellung}
 \caption{Exemplarische Darstellung einer Liste mit \textit{FlatList} in iOS}
 \label{fig:flatlist:ios}
 \end{figure}
@@ -131,10 +128,10 @@ Bei iOS Apps werden die benötigten Berechtigungen der App in XCode festgelegt u
 Nur wenn der Nutzer diese Berechtigungen akzeptiert, kann die Anwendung installiert werden.
 Daher wird in der App für die Nutzung von Funktionalitäten wie Standort- oder Kontaktzugriff keine zusätzliche Erlaubnis des Nutzers benötigt.
 
-\section{Installierbarkeit und Aktualisierungen}
+\section{Installation und Aktualisierungen}
 
 Das Ziel dieser Funktionalität ist es, dass die Anwendung auf das mobile Endgerät des Nutzers installiert werden kann.
-Dadurch sollen er schnell auf die App zugreifen können.
+Dadurch soll er schneller Zugriff ermöglicht werden.
 
 \subparagraph{Progressive Web App\\}
 Um eine Webanwendung installierbar zu machen, benötigt sie ein App Manifest und \textit{HTTPS}.
@@ -295,7 +292,7 @@ Sobald die Internetverbindung wiederhergestellt ist, werden die Daten per Netzwe
 %Somit wird gewährleistet, dass der Nutzer die neusten verfügbaren Corona-Daten erhält, wenn er eine Netzwerkverbindung hat.
 
 Zum Testen des Offlinebetriebs muss nun das Internet des Rechners, auf dem der Emulator geöffnet ist, ausgeschaltet werden.
-Dadurch wird nachgewiesen, dass die Anwendung trotz fehlender Netzwerkverbindung die im \textit{AsyncStorage}-gespeicherten Corona-Daten anzeigen kann.
+Dadurch wird nachgewiesen, dass die Anwendung trotz fehlender Netzwerkverbindung, die im \textit{AsyncStorage}-gespeicherten Corona-Daten anzeigen kann.
 
 \section{Standortzugriff}
 
@@ -306,16 +303,16 @@ Der Standortzugriff wird im Web über die sogenannte Geolocation \ac{api} ermög
 Die Bestimmung erfolgt dabei unter anderem durch GPS und verschiedenste Netzwerksignale.
 Sie wird vom \textit{navigator}-Objekt zur Verfügung gestellt und bietet unter anderem Zugriff auf Längen- und Breitengrad, Genauigkeit des bestimmten Standorts und die Höhe über dem Meeresspiegel des Gerätes \cite{Caceres.2021b}.
 
-Zur Implementierung dieser Funktionalität wird der Nutzer beim Klicken des \textit{Standort bestimmen}- Buttons zuerst, wie in Abbildung \ref{fig:permission_safari} zu sehen, nach seiner Zustimmung gefragt.
+Zur Implementierung dieser Funktionalität wird der Nutzer beim Klicken des \glqq Standort bestimmen\grqq{}- Buttons zuerst, wie in Abbildung \ref{fig:permission_safari} zu sehen, nach seiner Zustimmung gefragt.
+
 \begin{figure}[h]
  \centering
  \includegraphics[width=0.6\textwidth]{figures/Permission_Safari.png}
- \quelle{Eigene Darstellung}
  \caption{Erfragung des Standortzugriffs im iOS Browser}
  \label{fig:permission_safari}
 \end{figure}
 
-Sobald diese erteilt ist, wird die Methode \textit{Navigator.getCurrentPosition()} aufgerufen und deren Rückgabewert -- ein Objekt des Typs \textit{GeolocationPosition} -- einer Variable zugewiesen.\\
+Sobald diese erteilt ist, wird die Methode \textit{Navigator.getCurrentPosition()} aufgerufen und deren Rückgabewert -- ein Objekt des Typs \textit{GeolocationPosition} -- einer Variablen zugewiesen.\\
 Über eine kostenfreie Drittanbieter \ac{api} wird durch den Prozess des Reverse Geocachings aus den \textit{location.coords.latitude} und \textit{location.coords.longitude} Daten die Aufenthaltsstadt bestimmt.
 Der Wert des \textit{input}-Feldes wird dann auf den ermittelten Landkreis gesetzt und die Liste der Landkreise automatisch nach dieser gefiltert.
 
@@ -344,12 +341,12 @@ So nennt sich das \textit{onChange}-Event einer Texteingabe in React nun \textit
 
 \section{Kontaktzugriff}
 
-Für die Covid-19-Fallzahlen App soll es umgesetzt werden, dass der Nutzer die Liste der Landkreise nach der Adresse eines Kontakts filtern kann.
+Dem Nutzer soll es möglich sein, die Liste der Landkreise nach der Adresse eines Kontakts zu filtern.
 
 \subparagraph{Progressive Web App\\}
 Die Kontakte eines mobilen Endgeräts stehen der Webanwendung über das \textit{navigator}-Interface zur Verfügung.
 Konkret ist es dessen \textit{contacts}-Property, dass in chromiumbasierten Browsern seit Version 80 die Contact Picker \ac{api} implementiert und im \ac{https} Kontext nutzbar ist.
-Falls kein \ac{https} verhanden ist, existiert das Property nicht im \textit{navigator}.
+Falls kein \ac{https} vorhanden ist, existiert das Property nicht im \textit{navigator}.
 
 Mittels der \textit{select}-Funktion kann ein Kontakt auf Basis des Namens ausgewählt werden.
 Dabei wird bei der Implementierung festgelegt, welche Kontaktdaten bei der Auswahl angezeigt werden.
@@ -445,7 +442,7 @@ Dieser Aufruf wird bezeichnet als \textit{Web Push Protocol}, welches durch eine
 Der Push Service ist Teil eines jeden Browsers zur Verwaltung von Push Benachrichtigungen und ist deshalb dessen Implementierung überlassen.
 Jedoch ist festgelegt, dass der Service stets Anfragen in Form des \textit{Web Push Protocols} verarbeiten kann, wodurch für Entwickler die Form des Push Services irrelevant ist.\\
 Die letzte Station behandelt das \textit{Push}-Event auf dem Endgerät, welches die empfangenen Daten verarbeitet und daraus eine Benachrichtigung erzeugt.
-Dies wird von der Notification \ac{api} abgedeckt, welche Zugriff auf die betriebssystemsspezifischen Benachrichtungsfunktionen besitzt.
+Dies wird von der Notification \ac{api} abgedeckt, welcher Zugriff auf die betriebssystemsspezifischen Benachrichtungsfunktionen besitzt.
 Hierfür wird im Event die Anweisung \textit{self.registration.showNotifica\-tion(title, options)} ausgeführt.
 Der Übergabeparameter \textit{title} ist dabei der Titel der Benachrichtigung und \textit{options} ein Objekt mit einer Vielzahl von Optionen wie der Text der Benachrichtigung, Aktion-Buttons, Icons und Vibrationsanweisungen.%Quelle
 Im Service Worker eine Webanwendung kann auf dieses Event reagiert werden und aus den Informationen, die vom Push Service gesendet werden, eine lokale Benachrichtigung erzeugen.
@@ -465,6 +462,9 @@ Dies geschieht durch die Notification \ac{api} über den Aufruf von \textit{Noti
 In der asynchronen Rückgabe Funktion wird durch die \textit{messaging.getToken()}-Funktion von \textit{Firebase} ein Token für das Gerät generiert.
 Im Service Worker wird dann im Falle eines Pushes vom Server im \textit{push}-Event durch die \textit{showNotification(title, body)}-Funktion eine Benachrichtigung entsendet.
 \textit{Firebase} ersetzt die Nutzung des \textit{push}-Events jedoch durch seine eigene \textit{messaging.setBackgroundMessageHandler()}-Funktion, in der dasselbe durchgeführt wird.
+
+Eine Besonderheit von der Nutzung des \ac{fcm} ist außerdem, dass dem App Manifest das Attribut \textit{gcm\_sender\_id} mit dem Wert der Sender ID hinzugefügt werden muss.
+Diesen steht unter den Einstellung des \textit{Firebase}-Projekts.%???
 
 \subparagraph{React Native App\\}
 Der Prozess von Push Benachrichtigungen ist bei Native Apps ähnlich aufgebaut.

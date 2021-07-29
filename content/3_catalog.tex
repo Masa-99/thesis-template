@@ -5,9 +5,11 @@ Diese sind Funktionalität, Kompatibilität und Entwicklungsaufwand der Anwendun
 Als Reaktion auf die Coronakrise soll eine App programmiert werden, die zur Darstellung und Durchsuchung der aktuellen COVID-19 Fallzahlen dient.
 Dabei soll diese installierbar sein und auch bei schlechter oder fehlender Internetverbindung funktionieren.
 Außerdem soll der Nutzer eine Filterung der Daten auf Basis seines aktuellen Standorts oder auf Basis der Adresse eines seiner Kontakte durchführen können.
-Zuletzt soll es dem Nutzer möglich sein, Benachrichtigungen zur aktuellen Lage der Fallzahlen zu erhalten.\\
-Ziel der Anwendung ist es, schnell auf die Coronakrise zu reagieren und möglichst vielen Nutzern mit verschiedenen Betriebssystemen ihre Funktionalitäten anbieten zu können.
-Daher erfolgt keine Gewichtung der Kriterien, da alle Kriterien von gleicher Bedeutung sind.
+Zuletzt soll es dem Nutzer möglich sein, Benachrichtigungen zur aktuellen Lage der Fallzahlen zu erhalten.
+
+Anhand von Punkten wird die Erfüllung der Kriterien bemessen und zuletzt ausgewertet.
+Dabei erfolgt bewusst ein Verzicht auf eine Gewichtung der Kriterien.
+Der Grund hierfür ist, dass in diesem Anwendungsfall sowohl die Funktionalität als auch die Kompatibilität und der Entwicklungsaufwand von gleicher Bedeutung sind.
 
 \section{Funktionalitäten}
 Applikationen werden entwickelt, um Nutzern einen Mehrwert in ihrem Alltag zu bieten.
@@ -15,20 +17,23 @@ Je mehr Funktionalität eine Anwendung unterstützt, desto mehr Nutzen kann sie 
 Egal ob in der Web- oder Appentwicklung, wenn die Anwendung keinen Mehrwert bietet, wird sie nicht verwendet und wird dadurch vom Markt verdrängt.
 Im Folgenden werden diejenigen Funktionalitäten von Apps vorgestellt, die für den Vergleich ausgewählt wurden.
 
-\subsection{Installierbarkeit und Aktualisierungen}
+\subsection{Installation}
 \subparagraph{Beschreibung\\}
 Die Apps, die der Nutzer oft verwendet, sollten schnell erreichbar sein.
-Eine Installation wird daher bevorzugt und stellt eine grundlegende Funktion von mobilen Applikationen dar.
+Eine Installation wird daher in vielen Fällen bevorzugt und stellt eine grundlegende Funktion von mobilen Applikationen dar.
 Für das verwendete Gerät bedeutet das Installieren, dass es Kapazität seines Speichers der Applikation zur Verfügung stellen muss.
 Das ist dahingehend erwähnenswert, dass einige Nutzer auf das Installieren der App verzichten müssen, wenn ihnen unzureichend Speicherplatz zur Verfügung steht.
 
 Falls nun Aktualisierungen des Herstellers verfügbar sind, möchte der Nutzer diese auch erhalten und durchführen können.
 Dadurch können beispielsweise vorherige Fehler in der App bereinigt oder neue Funktionalität ermöglicht werden.
-Für die Entwickler ist es ebenfalls wichtig, dass die Anwendung stets in der aktuellsten Version installiert ist.
-Denn wenn es Änderungen der Schnittstellen gibt, stellt das eine besondere Problematik für die auf dem Endgerät installierte App dar.
 
 \subparagraph{Kriterium\\}
-Mit diesem Kriterium soll geprüft werden, ob die Anwendung installiert werden kann und inwieweit das den Speicherplatz des Endgeräts belastet.
+Mit diesem Kriterium soll geprüft werden, ob die Anwendung installiert werden kann oder muss.
+
+\begin{itemize}
+\item 0 Punkte: Die Nutzung der Anwendung ist abhängig von deren Installation.
+\item 1 Punkt: Die Nutzung der Anwendung ist unabhängig von deren Installation.
+\end{itemize}
 
 \subsection{Offlinebetrieb}
 \subparagraph{Beschreibung\\}
@@ -40,11 +45,15 @@ Um aus technischer Sicht eine Unabhängigkeit von der Netzwerkverbindung zu scha
 Das ermöglicht dem Nutzer, seine Daten jederzeit verfügbar zu haben und somit Abhängigkeiten von äußeren Umständen zu minimieren.
 Vorteilhaft für den Nutzer ist dabei auch, wenn die Prozesse, die im Offlinebetrieb angestoßen wurden, gehalten werden, bis das Gerät wieder eine stabile Internetverbindung hat.
 Auf diesem Wege wird gewährleistet, dass jegliche Aktivitäten erfolgreich durchgeführt werden.
-Nachteil des Abspeichern der Daten ist zum einen erhöhten Speicherverbrauch und bei einer großen Anzahl auch eine Steigerung des Batterieverbrauchs.
+Nachteil des Abspeicherns der Daten ist zum einen erhöhten Speicherverbrauch und bei einer großen Anzahl auch eine Steigerung des Batterieverbrauchs.
 
 \subparagraph{Kriterium\\}
 Dieses Kriterium soll prüfen, ob die Anwendung auch mit fehlender Netzwerkverbindung lauffähig ist.
-%Darüber hinaus ist interessant, ob die App in der Lage ist, die Netzwerkanfragen, die während des Offlinebetriebs gestellt wurden, abzuspeichern und später, wenn Internet besteht, auszuführen.
+
+\begin{itemize}
+\item 0 Punkte: Die Anwendung ist nach der Installation ohne Netzwerkverbindung nicht lauffähig.
+\item 1 Punkt: Die Anwendung ist nach der Installation ohne Netzwerkverbindung lauffähig.
+\end{itemize}
 
 \subsection{Standortzugriff}
 \subparagraph{Beschreibung\\}
@@ -58,17 +67,30 @@ Gängige Anwendungsfälle sind die Abfrage des Standorts für Wetterinformatione
 
 \subparagraph{Kriterium\\}
 Das Kriterium hier ist, ob die Anwendungen Zugriff auf den Standort des Nutzers besitzen.
-Außerdem ist von Bedeutung, ob und wie die Informationen mit der App weiterverarbeitet werden können und wie akkurat die Daten sind. 
+%Außerdem ist von Bedeutung, ob und wie die Informationen mit der App weiterverarbeitet werden können und wie akkurat die Daten sind. 
+
+\begin{itemize}
+\item 0 Punkte: Die Anwendung besitzt keinen Zugriff auf den Standort des Nutzers.
+\item 1 Punkt: Die Anwendung besitzt Zugriff auf den Standort des Nutzers.
+\item 2 Punkte: Die Anwendung besitzt Zugriff auf den Standort des Nutzers und kann diesen selbstständig weiterverarbeiten.
+\end{itemize}
 
 \subsection{Kontaktzugriff}
 \subparagraph{Beschreibung\\}
-Eine weiterer Zugriff auf native Schnittstellen eines mobilen Endgeräts bieten die Kontakte.
+Ein weiterer Zugriff auf native Schnittstellen eines mobilen Endgeräts bieten die Kontakte.
 Diese sind meist auf dem Gerät oder dem verknüpften Google oder Apple Konto hinterlegt.
-Sie können neben Bild, Name und Telefonnummer auch andere Kontaktdaten wie Anschriften oder E-Mail-Adressen beinhalten.\\
-In vielen Messaging Apps wie WhatsApp, Telegram oder KIK werden diese Daten verarbeitet, um dem Nutzer die Möglichkeit zu geben, seine Kontakte abgesehen von SMS oder Anrufen zu kontaktieren.
+Sie können neben Bild, Name und Telefonnummer auch andere Kontaktdaten wie Anschriften oder E-Mail-Adressen beinhalten.
+
+In vielen Messaging Apps wie WhatsApp, Telegram oder Kik Messenger werden diese Daten verarbeitet, um dem Nutzer die Möglichkeit zu geben, seine Kontakte abgesehen von SMS oder Anrufen zu kontaktieren.
 
 \subparagraph{Kriterium\\}
-Das Kriterium prüft, ob die Anwendung Zugriff auf die Kontaktliste des Nutzer erhalten kann, um Kontaktdaten weiterzuverarbeiten.
+Das Kriterium prüft, ob die Anwendung Zugriff auf die Kontaktliste des Nutzers erhalten kann, um Kontaktdaten weiterzuverarbeiten.
+
+\begin{itemize}
+\item 0 Punkte: Die Anwendung besitzt keinen Zugriff auf die Kontakte des Endgeräts.
+\item 1 Punkt: Die Anwendung besitzt Zugriff auf die Kontakte des Endgeräts.
+\item 2 Punkte: Die Anwendung besitzt Zugriff auf die Kontakte des Endgeräts und kann Kontakte hinzufügen, verändern und löschen.
+\end{itemize}
 
 \subsection{Benachrichtigung}
 \subparagraph{Beschreibung\\}
@@ -83,11 +105,17 @@ Push Benachrichtigung können kurze Informationen durch Texte, Bilder oder Butto
 Letzteres ist besonders wichtig, da der Nutzer darüber aus dem Menü heraus mit der Anwendung interagieren und auch auf diese weitergeleitet werden kann.
 Außerdem könnten sie Benachrichtigungstöne auslösen oder dem Icon der Anwendung ein Badge\footnote{Badges sind kleine Anzeigen am rechten oberen Rand des App Icons. An ihnen erkennt man die Anzahl an ungeöffneten Benachrichtigungen.} anheften.
 
-Konkrete Beispiele für Inhalte von Benachrichtigungen sind aktuelle WhatApp Nachrichten, neue Freundschaftsanfragen auf Facebook oder neue Suchergebnisse für die gespeicherte Ebay-Kleinanzeigen-Suche.
+Konkrete Beispiele für Inhalte von Benachrichtigungen sind aktuelle WhatsApp Nachrichten, neue Freundschaftsanfragen auf Facebook oder neue Suchergebnisse für die gespeicherte Ebay-Kleinanzeigen-Suche.
 
 \subparagraph{Kriterium\\}
-Die Anwendung muss fähig sein, Benachrichtigungen von einem Server zu erhalten.
+Die Anwendung muss fähig sein, Benachrichtigungen zu erhalten.
 Dies sollte auch funktionieren, ohne dass die Anwendung im Vorder- oder Hintergrund geöffnet ist.
+
+\begin{itemize}
+\item 0 Punkte: Die Anwendung kann keine Benachrichtigungen erhalten.
+\item 1 Punkt: Die Anwendung kann nicht-persistente Benachrichtigungen erhalten.
+\item 2 Punkte: Die Anwendung kann persistente Benachrichtigungen erhalten.
+\end{itemize}
 
 \section{Kompatibilität mit verschiedenen Betriebssystemen}
 \subparagraph{Beschreibung\\}
@@ -100,7 +128,17 @@ Auf welchen Geräten und Browsern die Anwendungen unterstützt werden sollen, wi
 \subparagraph{Kriterium}
 Das Kriterium besteht darin, dass die Anwendungen auf verschiedenen Betriebssystemen und Browsern funktionieren müssen.
 Dabei ist ausschlaggebend, wie viele der bereits definierten Funktionalitäten auf dem Browser oder Betriebssystem verfügbar sind.
-Je mehr Betriebssystem- und Browserversionen unterstützt werden, desto mehr ist dieses Kriterium erfüllt.
+
+\begin{itemize}
+\item 0 Punkte: Die Funktionalitäten der Anwendung sind mit einem Betriebssystem kompatibel und abhängig vom Browser.
+\item 1 Punkt: Die Funktionalitäten der Anwendung sind mit einem Betriebssystem kompatibel und unabhängig vom Browser.
+\item 2 Punkte: Die Funktionalitäten der Anwendung sind mit mehreren Betriebssystemen kompatibel und abhängig vom Browser.
+\item 3 Punkte: Die Funktionalitäten der Anwendung sind mit mehreren Betriebssystemen kompatibel und unabhängig vom Browser.
+
+\item 0 Punkte: Die Funktionalitäten der Anwendung stehen keinem Betriebssystem zur Verfügung.
+\item 1 Punkt: Die Funktionalitäten der Anwendung stehen einem Betriebssystem zur Verfügung.
+\item 2 Punkte: Die Funktionalitäten der Anwendung stehen beiden Betriebssystemen zur Verfügung.
+\end{itemize}
 
 \section{Entwicklungsaufwand}
 \subparagraph{Beschreibung\\}
@@ -117,4 +155,10 @@ Dennoch besteht bei beiden Ansätzen die Möglichkeit, dass zur Unterstützung v
 
 \subparagraph{Kriterium\\}
 Auf Basis der bereits genannten Kriterien, soll hierbei gemessen werden, wie lange für die Implementierung dieser benötigt wird.
-Dabei soll einerseits die Zeit zur Einarbeitung in die verschiedenen Technologien betrachtet werden sowie die tatsächliche Zeit, die zum programmieren der Funktionalität benötigt wird.
+Dabei soll einerseits die Zeit zur Einarbeitung in die verschiedenen Technologien betrachtet werden sowie die tatsächliche Zeit, die zum Programmieren der Funktionalität benötigt wird.
+
+\begin{itemize}
+\item 0 Punkte: Der Einarbeitungs- und Programmieraufwand benötigt bei beiden Technologien gleich viel Zeit.
+\item 1 Punkt: Der Einarbeitungs- oder Programmieraufwand benötigt weniger Zeit als bei der anderen Technologie.
+\item 2 Punkte: Der Einarbeitungs- und Programmieraufwand benötigt weniger Zeit als bei der anderen Technologie.
+\end{itemize}

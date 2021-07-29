@@ -6,7 +6,7 @@ Generell lassen sich mobile Anwendungen in drei Kategorien einteilen: Native, Hy
 Im Folgenden wird einerseits genauer auf Native und Hybride Applikationen und anderseits auf eine spezielle Form von Web Apps, genannt \acp{pwa}, eingegangen.
 
 \section{Native Applikationen}
-Als native Applikationen bezeichnet man Anwendungen, die plattformspezifisch -- ergo speziell für ein \ac{os} -- implementiert werden.
+Als native Applikationen werden Anwendungen bezeichnet, die plattformspezifisch -- ergo speziell für ein Betriebssystem -- implementiert sind.
 Das wird dadurch ermöglicht, dass sie mit dem \ac{sdk} des Plattformherstellers entwickelt werden und somit kompletten Zugriff auf jegliche Funktionalitäten der Geräte besitzen.
 Außerdem entsteht durch Verwendung der plattformspezifischen UI-Komponenten\footnote{User Interface Komponenten, z. Dt. Benutzeroberflächenkomponenten}, sogenannten Views, eine einheitliche Benutzerschnittstelle, die sich in allen Anwendungen des Betriebssystems widerspiegelt.
 Um solche Apps mit ihren \acp{sdk} zu entwickeln, wird die zur \ac{sdk} zugehörige Programmiersprache verwendet.
@@ -14,7 +14,7 @@ Die bekanntesten Programmiersprachen sind Java oder Kotlin für Android Geräte,
 Eine aktuelle Statistik von \textit{Statcounter} macht deutlich, dass die am meisten verbreiteten Betriebssysteme Android und iOS sind, weswegen im Verlauf dieser Arbeit ausschließlich auf ebendiese eingegangen wird \cite{o.V..2021b}.
 
 Um Applikationen im jeweiligen App-Store veröffentlichen zu können, müssen diese eindeutig identifizierbar sein.
-Das erfolgt durch den Prozess der sogenannten \textit{Signierung}, der ebenfalls plattformabhängig durchgeführt wird.\\
+Das erfolgt durch den Prozess der sogenannten Signierung, der ebenfalls plattformabhängig durchgeführt wird.\\
 Eine App kann nach der Signierung und Überprüfung nur durch eine Aktualisierung verändert (\zB Update oder Bugfix) werden.
 Deshalb folgt auf eine Aktualisierung auch eine erneute Überprüfung und Veröffentlichung der App.\\
 %Danach wird die App teilweise manuell überprüft, bevor sie letztendlich im App-Store publiziert wird.
@@ -101,9 +101,9 @@ Es handelt sich dabei um eine Bibliothek, die die gängigsten Funktionalitäten 
 \section{React}
 React ist eine von Facebook entwickelte, open-source JavaScript-Bibliothek, die seit 2013 publiziert ist.
 Sie zeichnet sich dadurch aus, dass sie in erster Linie zum Erstellen von User Interfaces entwickelt wurde.
-Durch die ReactDOM-Bibliothek, wird die Anwendung um das Rendern dieser Benutzeroberflächen erweitert.
+Durch die ReactDOM-Bibliothek wird die Anwendung um das Rendern dieser Benutzeroberflächen erweitert.
 Daran lässt sich auch erklären, warum React im Gegensatz zu Vue oder Angular kein Framework ist.
-Werden Projekte mit diesen Frameworks erstellt, erhält der Entwickler eine Vielzahl von eingebauten Werkzeugen zum entwickeln von skalierbaren, komplexen Webanwendungen.
+Werden Projekte mit diesen Frameworks erstellt, erhält der Entwickler eine Vielzahl von eingebauten Werkzeugen zum Entwickeln von skalierbaren, komplexen Webanwendungen.
 Im Gegensatz dazu ist React als \ac{ui}-Bibliothek leichtgewichtig und ermöglicht individuelle Erweiterung zur Anpassung an die Anforderungen des Projekts \cite{Barger.2021}.
 Dennoch können auch vielschichtige Anwendungen, \zB Facebook oder Paypal mit React umgesetzt werden. %Quelle
 
@@ -164,7 +164,7 @@ Das Schlüsselwort \textit{class} ist dabei in JavaScript ein reserviertes Wort 
 Ein weiteres Beispiel ist \textit{htmlFor} statt \textit{for}. Durch diese Syntax bietet React eine inklusive Dateistruktur.
 Die Entwickler begründen das damit, dass es hier im Gegensatz zu anderen JS-Frameworks, in denen es pro Komponente jeweils eine getrennte HTML-, CSS- und JavaScript-Datei gibt, lediglich um eine Trennung der Technologien, nicht aber der Verantwortlichkeiten, handelt.
 Diese Syntax hingegen verbinden die Render Logik enger mit den Benutzeroberfläche und führt bei einer korrekten Aufteilung in Komponenten zu einer starken Kohäsion.
-Das bietet dem Entwicklern mehr Übersichtlichkeit und Verständnis für Zusammengehörigkeit.
+Das bietet dem Entwickler mehr Übersichtlichkeit und Verständnis für Zusammengehörigkeit.
 Auf der anderen Seite werden komplexe Komponenten jedoch durch diese inklusive Struktur schnell unübersichtlich, weshalb es sinnvoll ist, eine Aufteilung in Unterkomponenten angelehnt an deren Funktionalität vorzunehmen.
 Wichtig ist hierbei auch eine organisierte Ordnerstruktur aufrecht zu erhalten, damit die Anwendung wartbar bleibt.
 
@@ -234,7 +234,7 @@ const Example = (props) =>  {
 Durch das \textit{dependency array} haben \textit{Effects} den Vorteil, dass sie sehr fallspezifisch auf Änderungen der Daten reagieren können und somit umso mehr den dynamischen Gedanken der \ac{spa} realisieren.
 
 \section{React Native}
-React Native ist eines der meist genutzten Frameworks zur Entwicklung von Native Apps \cite{o.V..2021b}.
+React Native ist eines der meistgenutzten Frameworks zur Entwicklung von Native Apps \cite{o.V..2021b}.
 Es basiert auf React und ist ebenfalls von Facebook entwickelt und veröffentlicht worden.
 Bekannte Apps, die auf React Native basieren, sind selbstverständlich die Facebook und Instagram App, aber auch die Unterkunftbuchungsapp Airbnb oder die Lieferdienstapp UberEats \cite{Facebook.f}.
 
@@ -242,7 +242,8 @@ Wie bereits im Kapitel Grundlagen erklärt, werden native Applikationen übliche
 React Native nutzt die Möglichkeit, mit JavaScript die Schnittstellen und \textit{Views} von Native Anwendungen anzusprechen und das Ganze somit als nativen Code zu rendern.
 Zur Laufzeit werden dabei durch die \textit{Core Components} von React Native die jeweils korrespondierenden \textit{Native Components} von Android, iOS und anderen Betriebssystemen angesprochen \cite{Facebook.}.
 Das wird ermöglicht durch die Architektur von React Native, die in drei Komponenten unterteilt ist: eine Laufzeitumgebung für JavaScript auf der Zielplattform, eine Bridge und ein Native Module.
-In der \ref{fig:structure} ist dieses Aufteilung abgebildet.
+In der \ref{fig:structure} ist diese Aufteilung abgebildet.
+
 \begin{figure}[h]
  \centering
  \includegraphics[width=1\textwidth]{figures/Aufbau_RN.png}
@@ -250,7 +251,7 @@ In der \ref{fig:structure} ist dieses Aufteilung abgebildet.
  \quelle{\cite{o.V..o.J.}}
  \label{fig:structure}
 \end{figure}
-%Zitat fehlt
+
 Ersteres bietet in iOS JavaScriptCore und in Android eine Lösung, die von React Native zur Verfügung gestellt wird.
 Dabei gibt es in React Native plattformübergreifende Abstraktionen wie \textit{View}, \textit{Image} oder \textit{NetInfo}, die korrespondierende Native Komponenten besitzen.
 Die Bridge ist für die Kommunikation zwischen Native Module und JS-Umgebung verantwortlich.

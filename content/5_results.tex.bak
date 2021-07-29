@@ -7,13 +7,13 @@ Außerdem wird die Frage beantwortet, ob für diesen Anwendungsfall die \ac{pwa}
 In diesem Kapitel wird lediglich darauf eingegangen, ob Schnittstellen zur Implementierung der geforderten Funktionalitäten vorhanden sind und wie viele Möglichkeiten diese anbieten.
 Die Kompatibilität der Funktionalitäten mit verschiedenen Betriebssystemen und Browsern ist Teil des nächsten Kapitels.
 
-\subparagraph{Installierbarkeit und Aktualisierungen\\}
-Lange Zeit war das Kriterium der Installierbarkeit ein signifikanter Unterschied zwischen nativen Apps und Web Applikationen.
-Durch den Service Worker und dem Manifest ist dies nun möglich.
+\subparagraph{Installation\\}
+Bislang war die Installierbarkeit ein signifikanter Unterschied zwischen nativen Apps und Web Applikationen.
+Durch den Service Worker und dem Manifest ist dies nun auch bei letzterem möglich.
 Zur Installation der programmierten \ac{pwa} wird der Link \url{https://corona-react-pwa-ba.netlify.app/} aufgerufen und das browserabhängige Vorgehen durchgeführt.
 In Android ist die \glqq App installieren\grqq{}-Option unter dem Einstellungen-Symbol zu finden.
 Danach ist die App auf dem Startbildschirm verfügbar und wird beim Aufrufen automatisch aktualisiert.
-Hierbei fällt auf, der Nutzer automatisch durch eine Banner am unteren Bildschirmrand darauf hingewiesen wird, dass er die Anwendung herunterladen kann.
+Hierbei fällt auf, der Nutzer automatisch durch einen Banner am unteren Bildschirmrand darauf hingewiesen wird, dass er die Anwendung herunterladen kann.
 Bei Android Geräten erscheinen die Apps nach der Installation durch das generierte WebAPK zudem im App-Drawer und als App in den Einstellungen des Geräts.
 Um die \ac{pwa} auf einem iOS Gerät zu installieren wird nach dem Aufrufen der App mit Safari das Teilen-Symbol geklickt und die Option \glqq Zum Home-Bildschirm\grqq{} gewählt.
 Auch hier ist die Anwendung dann vom Startbildschirm aus aufrufbar und wird stets auf dem neuesten Stand des Deployments aktualisiert.\\
@@ -23,15 +23,15 @@ Die Apps können dann, wie in Abbildung \ref{fig:pwa_rn_installed} abgebildet, �
 \begin{figure}[h]
 \subfigure[React Native App und PWA im App-Drawer auf einem Android Gerät]{\includegraphics[width=0.5\textwidth]{figures/PWA_RN_installed.png}}
 \subfigure[PWA im Startbildschirm auf einem iOS Gerät]{\includegraphics[width=0.5\textwidth]{figures/PWA_installed.png}}
-\quelle{Eigene Darstellung}
 \caption{Darstellung der installieren Apps}
 \label{fig:pwa_rn_installed}
 \end{figure}
 
 Auf dem Startbildschirm sind die Anwendungen in iOS optisch nicht voneinander unterscheidbar.
 Mit dem genutzten Emulator wird demgegenüber in der Chrome Version 83 durch ein kleines Browser-Symbol auf dem App-Icon deutlich, dass es sich hierbei um eine Webanwendung handelt.
-In aktuelleren Browserversionen wie Chrome 91 fällt auch dieses weg, wodurch \acp{pwa} auf Android Geräten ebenfalls aussehen wie Native Apps.
-Mittlerweile können auch Begrüßungsbildschirme\footnote{Wenn eine App gestartet wird, zeigt sie einige Sekunden eine Art Ladebildschirm an, bis sie bereit ist. Dabei wird meist das Logo der App und eine Hintergrundfarbe angezeigt.} für \acp{pwa} implementiert werden, wenn die Attribute \textit{name}, \textit{background\_color} und \textit{icons} im App Manifest vorhanden sind \cite{LePage.2021}.
+In aktuelleren Browserversionen wie Chrome 91 entfällt auch dieses Symbol, wodurch \acp{pwa} auf Android Geräten ebenfalls wie Native Apps aussehen.
+Mittlerweile können auch Begrüßungsbildschirme\footnote{Wenn eine App gestartet wird, zeigt sie einige Sekunden eine Art Ladebildschirm an, bis sie bereit ist.
+Dabei wird meist das Logo der App und eine Hintergrundfarbe angezeigt.} für \acp{pwa} implementiert werden, wenn die Attribute \textit{name}, \textit{background\_color} und \textit{icons} im App Manifest vorhanden sind \cite{LePage.2021}.
 
 Ein Vorteil von \acp{pwa} ist dennoch, dass sie grundsätzlich nicht installiert werden müssen.
 Alle Funktionalitäten wie Standortzugriff oder Push Benachrichtigungen können aus dem Web heraus geschehen.
@@ -72,7 +72,7 @@ Sobald die Verbindung wieder hergestellt wird, werden die Daten erneut aus dem I
 Der Unterschied in der Implementierung des Offlinebetriebs ist, dass bei der \ac{pwa} auf fehlschlagende Netzwerkanfragen reagiert und bei der Native App der Stand der Internetverbindung abgefragt wird.
 Somit werden bei der nativen Anwendung trotz der vermeintlichen \glqq Network, falling back to cache\grqq{}-Strategie nicht mehr Ressourcenanfragen gestellt als bei der \ac{pwa}.
 
-Die Anwendungen unterscheiden sich in sofern nicht voneinander, dass beide erst nach der Installation offline verfügbar sind.
+Die Anwendungen unterscheiden sich insofern nicht voneinander, dass beide erst nach der Installation offline verfügbar sind.
 Für die \ac{pwa} bedeutet dies, dass sie zumindest einmal aufgerufen werden muss.
 Denn nur wenn der Service Worker installiert und aktiviert ist, hat er die Fähigkeit, im Falle eine fehlenden Netzwerkverbindung mit zwischengespeicherten Daten zu reagieren.
 Die React Native App muss ebenfalls durch das Herunterladen aus einem App Store installiert werden.
@@ -99,7 +99,8 @@ Dies ist bei Native Apps nicht der Fall, denn mobile Endgeräte können durch da
 Zuletzt ist bei \acp{pwa} im Gegensatz zu nativen Apps die Weiterverarbeitung der Standortdaten im Sinne von beispielsweise Geofencing\footnote{Geofencing bezeichnet das Auslösen von Benachrichtigungen beim Betreten oder Verlassen von definierten Bereichen und Orten.} nicht möglich.
 Ein Entwurf einer Spezifikation zur Implementierung einer solchen Funktion von 2017 ist von W3C als obsolet markiert \cite{GeofencingAPI.2017}.
 % Eigentlich gibt es auch 	die watchPostion-Funktion, wieso kann die nicht für Geofencing genutzt werden?
-Gerade hierfür ist darüber hinaus die Genauigkeit der Koordinaten relevant.
+
+Gerade für das Geofencing ist darüber hinaus die Genauigkeit der Koordinaten relevant.
 Ein Beispiel dafür ist das Benachrichtigen des Nutzers beim Betreten unterschiedlicher Räume in einer Wohnung, ferner aber auch das Bestimmen des Standorts eines verlorengegangenen Geräts.
 Für die implementierte App ist die Genauigkeit der Koordinaten nicht von Bedeutung, da lediglich die Stadt ermittelt werden soll, in welcher der Nutzer der App sich befindet.
 Beim Testen wird jedoch deutlich, dass die Koordinaten, wie in Abbildung \ref{fig:comparison_geoloc}, exakt übereinstimmen.
@@ -107,7 +108,6 @@ Beim Testen wird jedoch deutlich, dass die Koordinaten, wie in Abbildung \ref{fi
 \begin{figure}[h]
 \subfigure[Standortbestimmung PWA]{\includegraphics[width=0.49\textwidth]{figures/Geoloc_PWA.png}}
 \subfigure[Standortbestimmung React Native App]{\includegraphics[width=0.49\textwidth]{figures/Geoloc_RNA.png}}
-\quelle{Eigene Darstellung}
 \caption{Darstellung der bestimmten Koordinaten}
 \label{fig:comparison_geoloc}
 \end{figure}
@@ -130,7 +130,6 @@ Entwürfe für das Erweitern der Funktionalität dieser \ac{api} liegen aktuell 
 \begin{figure}[h]
  \centering
  \includegraphics[width=0.6\textwidth]{figures/contact_picker_ui.png}
-  \quelle{Eigene Darstellung}
  \caption{Benutzeroberfläche der Contact Picker \ac{api} in Chrome}
  \label{fig:contact_picker_ui}
 \end{figure}
@@ -145,7 +144,6 @@ Das betrifft beispielsweise das Beantworten einer Nachricht oder das Löschen ei
 \begin{figure}[h]
  \centering
  \includegraphics[width=0.6\textwidth]{figures/Push_notifications.png}
-  \quelle{Eigene Darstellung}
  \caption{Vergleich Benachrichtigungen PWA (oben) und React Native App (unten)}
  \label{fig:pushnotifications_comparison}
 \end{figure}
@@ -163,18 +161,6 @@ Das hat bei der Verwendung jener Schnittstellen zufolge, dass sich im Laufe der 
 Deshalb sollten diese mit Vorsicht genutzt werden.
 Beispielsweise ist das App Manifest aktuell vom \textit{W3C} als experimentell gekennzeichnet und die Contact Picker \ac{api} noch ein inoffizieller Entwurf \cite{MDNcontributors.d}\cite{Beverloo.2021}.
 
-%Bezogen auf die in dieser Arbeit implementierte App kann rein vom Funktionsumfang die \ac{pwa} eine Native App ersetzen.
-
-%Web App Gap
-%Project Fugu
-
-%Großes Problem bei PWAs allgemein ist die fehlenden Unterstützung von Apple. Das macht aber auch Sinn, da sie viel daran verdienen, dass leute eine Lizenz für jeden Anwendung und deren In-App-Verläufe zahlen müssen
-
-%PWA kommt nicht gut mit der großen Datenmengen zurecht, Werte wie Largest Contentful Paint und Total Blocking Time sind nicht gut
-
-%React Native hat eine Code Push Funktionalität, die es erlaubt neue Versionen des Codes zu veröffentlichen ohne dass der Nutzer eine Aktualisierung durchführen muss.
-%Das ist gut für den Nutzer, aber kann Probleme bei der Veröffentlichung im App Store mitbringen, weil dort normalerweise jede Code Änderung verifiziert werden muss.
-
 \section{Kompatibilität mit verschiedenen Betriebssystemen} 
 Durch das Testen der Apps auf jeweils einem iOS und einem Android Smartphone soll nun die Kompatibilität der beiden Anwendungen überprüft werden.
 Hierfür wird ein Apple IPhone 12 mit iOS 14 und ein Huwaei P10 Lite mit Android 10 verwendet.
@@ -182,14 +168,14 @@ Die Native App wird mit einem Google Pixel 4 Emulator mit Android 11 getestet.
 
 \subparagraph{Progressive Web App\\}
 Die \ac{pwa} ist unter dem Link \url{https://corona-react-pwa-ba.netlify.app/} erreichbar.
-Hierdurch kann sie mit jedem Browser eines internetfähigem Geräts erreicht werden, wodurch sie größtenteils betriebssystemunabhängig sind.
+Hierdurch kann sie mit jedem Browser eines internetfähigen Geräts erreicht werden, wodurch sie größtenteils betriebssystemunabhängig sind.
 Falls ein Browser dennoch gewisse Funktionalitäten der \ac{pwa} nicht unterstützt, wird durch den Ansatz des Progressive Enhancements sichergestellt, dass die Seite zumindest die aktuellen Corona-Daten darstellt und diese nach dem Namen des Landkreises filtern kann.
 
 In der Tabelle \ref{fig:compability_android} sind die Ergebnisse des Testens aufgelistet.
 In Klammern dahinter steht zusätzlich jeweils die Browserversion, ab dem laut \textit{MDN Web Docs} diese Funktionalität unterstützt wird.
 Bei der Verwendung eines Android Geräts können die meisten Funktionen genutzt werden, lediglich der Kontaktzugriff entfällt auf dem Firefox Webbrowser.
-Für die Installierbarkeit mit Opera gibt es von \textit{MDN Web Docs} keine Angaben über die Browserversion.
-Die Verifizierung konnte jedoch beim Testen mit der Opera Version 64 nachgewiesen werden.
+Für die Installation mit Opera gibt es von \textit{MDN Web Docs} keine Angaben über die Browserversion.
+Diese Funktionalität konnte jedoch beim Testen mit der Opera Version 64 nachgewiesen werden.
 Über die Nutzung der \ac{pwa} auf einem Android Gerät mit dem Safari Browser konnten keine Daten erhoben werden, da die Safari App im Google Play Store nicht zu Verfügung steht.
 
 \begin{table}[h]
@@ -201,7 +187,7 @@ Die Verifizierung konnte jedoch beim Testen mit der Opera Version 64 nachgewiese
 \hline
  & Chrome & Firefox & Opera & Safari \\
 \hline
-Installierbarkeit & ja (39) & ja (53) & ja (\kA) & - \\
+Installation & ja (39) & ja (53) & ja (\kA) & - \\
 \hline
 Offlinebetrieb & ja (40) & ja (39) & ja (27) & - \\
 \hline
@@ -216,7 +202,7 @@ Benachrichtigung & ja (42) & ja (44) & ja (37) & - \\
 \end{table}
 
 Die Tabelle \ref{fig:compability_ios} zeigt die Ergebnisse der Kompatibilität bei Nutzung eines iOS Geräts.
-Hierbei wird deutlich, dass die \ac{pwa}, wenn sie im Chrome, Opera oder Firefox Webbrowser aufgerufen wird, nicht die Funktionalität der Installierbarkeit unterstützt.
+Hierbei wird deutlich, dass die \ac{pwa}, wenn sie im Chrome, Opera oder Firefox Webbrowser aufgerufen wird, nicht die Funktionalität der Installation unterstützt.
 Das ist damit zu begründen, dass iOS diese Browser mit WebKit rendert, statt mit den eigenen HTML-Renderern (\zB Blink für Chrome).
 %Denn jede iOS App muss laut Punkt 2.5.6 der Apple App Store Review Guidelines als Engine WebKit nutzen \cite{Apple.07.06.2021}.
 %einfach nicht supported https://support.google.com/chrome/answer/9658361?hl=en&co=GENIE.Platform%3DiOS
@@ -234,7 +220,7 @@ Dennoch zeigt dies, dass sich Apple einer Implementierung moderner Browserschnit
 \hline
  & Chrome & Firefox & Opera & Safari \\
 \hline
-Installierbarkeit & nein & nein & nein & ja (11.3) \\
+Installation & nein & nein & nein & ja (11.3) \\
 \hline
 Offlinebetrieb & ja (40) & ja (44) & ja (27) & ja (11.3) \\
 \hline
@@ -263,13 +249,14 @@ Es wird dennoch davon ausgegangen, dass alle geforderten Funktionen wie bei der 
 %Das heißt, dass eine Native App beim Faktor Kompatibilität mit verschiedenen Betriebssystemen nicht vergleichbar ist mit einer \ac{pwa}.
 
 \subparagraph{Zusammenfassung\\}
-Die Unterstützung von \acp{pwa} auf Apple Geräten hat sich seit iOS 11.3 verbessert, da mit dieser Version Schnittstellen wie der Service Worker, das App Manifest oder xx verfügbar sind.% ????
-Allerdings ist es, wie bereits im Kapitel \ref{ch:implementation} beschrieben, aktuell nicht möglich, Push Benachrichtigungen auf einem iOS Smartphone zu erhalten oder den Zugriff auf die Kontakte zu ermöglichen.%Quelle
+Die Unterstützung von \acp{pwa} auf Apple Geräten hat sich, seit iOS 11.3 verbessert, da durch diese Version Schnittstellen wie der Service Worker, das App Manifest oder Cache \ac{api} verfügbar sind.
+Allerdings ist es, wie bereits im Kapitel \ref{ch:implementation} beschrieben, aktuell nicht möglich, Push Benachrichtigungen auf einem iOS Smartphone zu erhalten.
 Das ist ein großer Nachteil von \acp{pwa}, da 26,34 Prozent des Marktanteils somit nicht bedient werden können \cite{ODea.2021}.
-Außerdem geht damit ein ausschlaggebender Faktor zur laufenden Interaktion mit den Nutzern verloren.
-Auch in naher Zukunft arbeitet Apple aktiv nicht an einer Implementation dieser Funktionalität. %Quelle, warum
+Vor allem die fehlende Unterstützung von Push Benachrichtigungen ist gravierend, da somit ein ausschlaggebender Faktor zur laufenden Interaktion mit den Nutzern verloren geht.
+Von Apple gibt es keine Rückmeldung, ob und wann die Funktion unterstützt werden soll.\\%quelle
+Die Schnittstelle für den Kontaktzugriff wurde mit der aktuellen iOS Version 14.7 veröffentlicht und ist nach der Entfernung der Experimentell-Markierung künftig vollständig verfügbar \cite{Firtman.2021}.
 
-Rein von der Auswahl der verschiedenen Betriebssysteme, auf denen eine \ac{pwa} aufgerufen werden kann, hat eine \ac{pwa} mehr Reichweite.
+Von der Auswahl der verschiedenen Betriebssysteme, auf denen eine \ac{pwa} aufgerufen werden kann, hat eine \ac{pwa} mehr Reichweite.
 Da die Kompatibilität jedoch lückenhaft ist, kann dies nicht als Vorteil der \ac{pwa} gesehen werden.
 Vor allem die fehlende Unterstützung von iOS Geräten spricht gegen deren Etablierung.
 Eine React Native App verspricht mehr Kompatibilität als eine Native App, jedoch konnte auch dies nicht bestätigt werden, da die iOS App in diesem Falle bereits beim Aufsetzen der Entwicklungsumgebung gescheitert ist.
@@ -277,7 +264,7 @@ Bei einer Ausstattung mit einem Mac-Computer wäre dies weniger problematisch, d
 Dies trifft ebenso für die Nutzung des Expo Frameworks zu, da dadurch auch auf einem Windows Computer eine auf beiden Betriebssystemen lauffähige App entwickelt werden kann.
 Native Apps selbst sind nach wie vor betriebssystemabhängig, wodurch sich die Kompatibilität mit verschiedenen Betriebssystemen erübrigt.
 
-Zusammenfassend bedeutet dies dennoch, dass \acp{pwa} im Bezug auf Kompatibilität mit verschiedenen Betriebssystemen Native Apps voraus sind, da sie generell auf beiden betrachteten Betriebssystemen lauffähig sind.
+Zusammenfassend bedeutet dies dennoch, dass \acp{pwa} in Bezug auf Kompatibilität mit verschiedenen Betriebssystemen Native Apps voraus sind, da sie generell auf beiden betrachteten Betriebssystemen lauffähig sind.
 Die Unterstützung einzelner Funktionalitäten ist wiederum eine Schwachstelle von \acp{pwa}, da manche nicht auf iOS Geräten existieren.
 Plattformunabhängige Apps hingegen bieten -- wenn eine geeignete Entwicklungsumgebung zur Verfügung steht -- für die geforderten Funktionalitäten am meisten Kompatibilität mit verschiedenen Betriebssystemen.
 
@@ -299,7 +286,7 @@ In der Tabelle \ref{fig:outlay_comparison} ist die Auflistung der Aufwände darg
 \hline
 \makecell{Einrichten der\\Entwicklungs-\\umgebung} & 60 min & 240 min & 25 min & 60 min \\
 \hline
-Installierbarkeit & 30 min & 60 min & 30 min & 15 min \\
+Installation & 30 min & 60 min & 30 min & 15 min \\
 \hline
 Offlinebetrieb & 100 min & 40 min & 45 min & 30 min \\
 \hline
@@ -321,7 +308,7 @@ Dennoch hat dies bei React Native mehr Zeit beansprucht als bei dem Aufsetzen de
 Das betrifft beispielsweise das Konfigurieren von Android Studio oder das Aufsetzen eines \ac{avd}.
 Bei der \ac{pwa} musste lediglich der Befehl \glqq npx create-react-app corona-react-pwa-ba\grqq{}\footnote{Letzteres ist der Name der Anwendung und kann frei gewählt werden} ausgeführt werden und ein vollständiges Setup zum Entwickeln einer Single Page Application ist erstellt.
 Diese konnte dann sofort mit Webpack auf einem Webserver gestartet und weiterentwickelt werden.\\
-Die Installierbarkeit hat bei \acp{pwa} circa doppelt so lange benötigt, weil konkrete Implementierungen vorgenommen werden mussten, um dies hierbei zu ermöglichen.
+Die Ermöglichung der Installation hat bei \acp{pwa} circa doppelt so lange benötigt, weil konkrete Implementierungen vorgenommen werden mussten, um dies bei der \ac{pwa} zu ermöglichen.
 Beispielsweise musste das App Manifest erstellt und Icons zur Verfügung gestellt werden.
 Native Apps sind generell installierbar, sie müssen lediglich zur Veröffentlichung in einem App Store signiert werden.\\
 Das Ermöglichen des Offlinebetriebs hat bei der \ac{pwa} mehr Zeit beansprucht, da hier die verschiedenen Arten des Cachings der Daten betrachtet und ausgewählt werden mussten.
@@ -362,12 +349,11 @@ Im Gegensatz dazu sind \acp{pwa} in der Entwicklung grundlegend unabhängig, da 
 
 Ferner muss betont werden, dass es sich bei React Native App trotz der Programmierung großer Teile in JavaScript im Endeffekt um zwei Technologien handelt, die der Entwickler beherrschen muss.
 Einerseits JavaScript für das Implementieren einer Anwendung mit React, andererseits das Wissen über native Entwicklung, Schnittstellen und betriebssystemabhängige Programmiersprachen, um gegebenenfalls plattformspezifischen Code zu ergänzen.
-Das wirkt sich insofern auf den Entwicklungsaufwand aus, dass JavaScript-Entwickler, die keine noch Erfahrungen mit nativer App-Entwicklung haben, mehr Zeit für die Einarbeitung in die Thematik benötigen.
+Das wirkt sich insofern auf den Entwicklungsaufwand aus, dass JavaScript-Entwickler, die keine Erfahrungen mit nativer App-Entwicklung haben, mehr Zeit für die Einarbeitung in die Thematik benötigen.
 
 \begin{figure}
 \subfigure[React App Texteingabe Implementierung]{\includegraphics[width=0.49\textwidth]{figures/Input_R.png}}
 \subfigure[React Native Texteingabe Implementierung]{\includegraphics[width=0.49\textwidth]{figures/Input_RN.png}}
-\quelle{Eigene Darstellung}
 \caption{Vergleich Implementierung React PWA und React Native App}
 \label{fig:textinputComparison}
 \end{figure}
@@ -378,68 +364,59 @@ Hieran wird sichtbar, dass in vielen Fällen die Syntax nur abgeändert werden m
 Das ist vor allem dann eine Option, wenn im Laufe des Projekts klar wird, dass die Funktionalitäten, die \acp{pwa} aktuell anbieten, nicht ausreichen.
 Diese Art von flexibler Entwicklung bieten native Anwendungen grundsätzlich nicht.
 
-\section{Diskussion}
+\section{Bewertung der Technologien anhand des Kriterienkatalogs}
 In der Tabelle \ref{fig:discussion_impl} soll nun auf Grundlage der dargestellten Argumente die Erfüllung der einzelnen Kriterien in Form von Punkten bewertet werden.
-Auf eine Gewichtung der Kriterien wurde durch den Anwendungsfall bewusst verzichtet.% Warum?
-Die Bewertung beruht auf folgenden Definitionen:
-\begin{itemize}
-\item 0 Punkte: Das Kriterium konnte nicht erfüllt werden.
-\item 1 Punkt: Das Kriterium konnte teilweise erfüllt werden.
-\item 2 Punkte: Das Kriterium konnte vollkommen erfüllt werden.
-\end{itemize}
+Diese beruht auf den in Kapitel \ref{ch:catalog} festgelegten Definitionen der Erfüllung.\\
+Auf eine Gewichtung der Kriterien wurde durch den Anwendungsfall bewusst verzichtet.
+Der Grund hierfür ist, wie bereits erwähnt, dass sowohl die Funktionalität als auch die Kompatibilität und der Entwicklungsaufwand für den Anwendungsfall von gleicher Bedeutung sind.
 
-\begin{table}[h]
+
+\begin{table}[ht]
 \centering
 \caption{Nutzwertanalyse der beiden implementierten Anwendungen}
-\begin{tabular}[h]{|c||c|c|}
+\begin{tabular}{|ll|c|c|}
 \hline
-\textbf{Kriterium} & \textbf{PWA} & \textbf{Native App} \\
-\hline
-Funktionalität & 2  & 2 \\
-\hline
-\makecell{Kompatibilität \\mit vers. \\Betriebssystemen}  & 1  & 2 \\
-\hline
-Entwicklungsaufwand  & 2  & 1 \\
-\hline
-\hline
-Summe & 5  & 5 \\
-\hline
+\multicolumn{1}{|c}{\textbf{Kriterium}}               & \multicolumn{1}{c|}{} & \textbf{PWA} & \textbf{Native App} \\ \hline
+\multicolumn{1}{|l|}{\multirow{5}{*}{Funktionalität}} & Installation          & 1            & 0                   \\ \cline{2-4} 
+\multicolumn{1}{|l|}{}                                & Offlinebetrieb        & 1            & 1                   \\ \cline{2-4} 
+\multicolumn{1}{|l|}{}                                & Standortzugriff       & 1            & 2                   \\ \cline{2-4} 
+\multicolumn{1}{|l|}{}                                & Kontaktzugriff        & 1            & 2                   \\ \cline{2-4} 
+\multicolumn{1}{|l|}{}                                & Benachrichtigungen    & 2            & 2                   \\ \hline
+\multicolumn{2}{|l|}{Kompatibilität mit vers. Betriebssystemen}               & 2            & 3 (1)               \\ \hline
+\multicolumn{2}{|l|}{Entwicklungsaufwand}                                     & 2            & 0                   \\ \hline
+\multicolumn{2}{|l|}{\textbf{Summe}}                                          & \textbf{10}  & \textbf{10 (8)}     \\ \hline
 \end{tabular}
 \label{fig:discussion_impl}
 \end{table}
 
-Beim Kriterium der Funktionalität erreichen beide Apps für den definierten Anwendungsfall die maximale Punktzahl, da alle geforderten Funktionen mit beiden Technologien umgesetzt werden können.
-Die Kompatibilität mit verschiedenen Betriebssystemen war bei \acp{pwa} nicht vollkommen gegeben, da Safari, wie bereits erläutert, einige Funktionalitäten nicht unterstützt.
-Das Kriterium des Entwicklungsaufwands erfüllt die \ac{pwa} wiederum besser, weil sowohl die Recherche- als auch die Implementierungszeit geringer war als bei der React Native App.
-Deshalb erhält die \ac{pwa} in diesem Aspekt eine höhere Punktzahl.\\
-Das Ergebnis zeigt, dass in diesem Anwendungsfall die Native App durch eine \ac{pwa} ersetzt werden kann.
+Beim Kriterium der Funktionalität kann die \ac{pwa} mit der Native App mithalten, jedoch wird deutlich, dass die Native App mehr kann.
+Lediglich bei der Installation ist die \ac{pwa} durch ihre erhöhte Zugänglichkeit im Vorteil.\\
+Die Kompatibilität mit verschiedenen Betriebssystemen ist bei der \ac{pwa} mit 2 Punkten versehen, da sie \ac{pwa} kompatibel mit mehreren Betriebssystemen ist, aber abhängig von dem verwendeten Browser.
+Eine React Native App hingegen ist generell für mehreren Betriebssystemen verfügbar und unabhängig vom Browser.
+Dennoch steht in Klammern dahinter eine geringere Punktzahl, die eine normale, native App erhalten würde, denn diese unterscheidet sich stark implementierten React Native App, da sie nur auf einem Betrieb\\
+Das Kriterium des Entwicklungsaufwands erfüllt die \ac{pwa} wiederum besser, weil sowohl die Recherche- als auch die Implementierungszeit geringer war als bei der React Native App.\\
+Das Ergebnis zeigt, dass beide Technologien für diesen Anwendungsfall gleich viel Punkte erhalten.
+Lediglich die normale, native App, würde in diesem Vergleich weniger Punkte als die \ac{pwa} erreichen und somit für eine klare Ersatz durch \acp{pwa} sprechen.
 
-Nun sollen in einer weiteren Tabelle \ref{fig:discussion_gen} die Erfüllung der Kriterien durch die zwei Technologien im Allgemeinen betrachtet werden.
-Hierbei wurde zusätzlich eine tatsächlich Native App für den Vergleich aufgenommen, denn diese unterscheidet sich insofern, dass nicht kompatibel mit verschiedenen Betriebssystemen ist.
-Auch der Entwicklungsaufwand ist höher, denn um dasselbe Ergebnis zu erreichen wie bei einer PWA oder React Native App muss für jedes Betriebssystem eine eigene App mit der jeweiligen Entwicklungsumgebung entwickelt werden.
-Im Gegensatz zur vorherigen Tabelle wird deutlich, dass \acp{pwa} weniger Funktionalitäten unterstützen als React Native oder Native Apps.
-Beispielsweise betrifft das in dieser Arbeit nicht behandelte Funktionen wie das Geofencing oder die User Idle Detection\footnote{Das Erkennen, ob der Nutzer den Bildschirm aktiv betrachtet.} \cite{AppBar.2021}.
-Die anderen Kriterien sind bei der \ac{pwa} und React Native App gleichermaßen erfüllt.\\
+%Beim Kriterium der Funktionalität erreichen beide Apps für den definierten Anwendungsfall die maximale Punktzahl, da alle geforderten Funktionen mit beiden Technologien umgesetzt werden können.
+%Die Kompatibilität mit verschiedenen Betriebssystemen war bei \acp{pwa} nicht vollkommen gegeben, da Safari, wie bereits erläutert, einige Funktionalitäten nicht unterstützt.
+%Das Kriterium des Entwicklungsaufwands erfüllt die \ac{pwa} wiederum besser, weil sowohl die Recherche- als auch die Implementierungszeit geringer war als bei der React Native App.
+%Deshalb erhält die \ac{pwa} in diesem Aspekt eine höhere Punktzahl.\\
+%Das Ergebnis zeigt, dass in diesem Anwendungsfall die Native App durch eine \ac{pwa} ersetzt werden kann.
 
-\begin{table}[h]
-\centering
-\caption{Nutzwertanalyse der beiden Technologien im Allgemeinen}
-\begin{tabular}[h]{|c||c|c|c|}
-\hline
-\textbf{Kriterium} & \textbf{PWA} & \textbf{React Native App} & \textbf{Native App} \\
-\hline
-Funktionalität & 1  & 2 & 2 \\
-\hline
-\makecell{Kompatibilität \\mit vers. \\Betriebssystemen}  & 1  & 2 & 0 \\
-\hline
-Entwicklungsaufwand  & 2  & 1 & 0 \\
-\hline
-\hline
-Summe & 4  & 5 & 2 \\
-\hline
-\end{tabular}
-\label{fig:discussion_gen}
-\end{table}
 
-Anhand des Vergleichs der beiden Nutzwertanalysen wird klar, dass \acp{pwa} nicht allgemein als Ersatz zu nativen Anwendungen gesehen werden können.
-Die Ergebnisse legen zudem zusammenfassend nahe, dass eine Entscheidung für eine der beiden Implementationen abhängig von den Anforderungen an die zu entwickelnde  getroffen werden sollte.
+
+
+
+
+
+%Nun sollen in einer weiteren Tabelle \ref{fig:discussion_gen} die Erfüllung der Kriterien durch die zwei Technologien im Allgemeinen betrachtet werden.
+%Hierbei wurde zusätzlich eine tatsächlich Native App für den Vergleich aufgenommen, denn diese unterscheidet sich insofern, dass sie nicht kompatibel mit verschiedenen Betriebssystemen ist.
+%Auch der Entwicklungsaufwand ist höher, denn um dasselbe Ergebnis zu erreichen wie bei einer PWA oder React Native App, muss für jedes Betriebssystem eine eigene App mit der jeweiligen Entwicklungsumgebung entwickelt werden.
+%Im Gegensatz zur vorherigen Tabelle wird deutlich, dass \acp{pwa} weniger Funktionalitäten unterstützen als React Native oder Native Apps.
+%Beispielsweise betrifft das in dieser Arbeit nicht behandelte Funktionen wie das Geofencing oder die User Idle Detection\footnote{Das Erkennen, ob der Nutzer den Bildschirm aktiv betrachtet.} \cite{AppBar.2021}.
+%Die anderen Kriterien sind bei der \ac{pwa} und React Native App gleichermaßen erfüllt.\\
+
+%Her zu ausblick als hier
+%Anhand des Vergleichs der beiden Nutzwertanalysen wird klar, dass \acp{pwa} nicht allgemein als Ersatz zu nativen Anwendungen gesehen werden können.
+%Die Ergebnisse legen zudem zusammenfassend nahe, dass eine Entscheidung für eine der beiden Implementationen abhängig von den Anforderungen an die zu entwickelnde App getroffen werden sollte.

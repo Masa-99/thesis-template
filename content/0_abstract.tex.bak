@@ -10,7 +10,7 @@ In der vorliegenden Bachelorarbeit wird untersucht, ob und welche Vor- und Nacht
 Ferner soll damit die Frage beantwortet werden, ob sie diese ersetzen kann, um die Chancen von Progressive Web Apps zu analysieren.
 Die Besonderheit dabei ist, dass für die Entwicklung der Native App ein plattformunabhängiger Ansatz gewählt wurde, um die Technologien auf eine vergleichbare Ebene zu bringen.\\
 Für den Vergleich wurde auf Basis eines Kriterienkatalogs, bestehend aus Funktionalität, Kompatibilität mit verschiedenen Betriebssystemen und Entwicklungsaufwand, jeweils eine App entwickelt.
-Diese stellt die aktuellen COVID-19 Fallzahlen dar und unterstützt neben dem Offlinebetrieb und der Installierbarkeit die Funktionen Standortzugriff, Kontaktzugriff und Benachrichtigungen.\\
+Diese stellt die aktuellen COVID-19 Fallzahlen dar und unterstützt neben dem Offlinebetrieb und der Installation die Funktionen Standortzugriff, Kontaktzugriff und Benachrichtigungen.\\
 Bei den implementierten Funktionalitäten wird deutlich, dass Progressive Web Apps mittlerweile durch eine Vielzahl von modernen Schnittstellen des Webs eine Alternative zu Native Apps darstellen können.
 Dabei ist jedoch eine Schwachstelle von Progressive Web Apps die fehlende Unterstützung einiger Funktionalitäten von iOS.
 Der Entwicklungsaufwand einer Progressive Web App ist geringer als der einer Native App.\\
