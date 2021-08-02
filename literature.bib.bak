@@ -1,5 +1,15 @@
 % This file was created with Citavi 6.10.0.0
 
+@misc{Agontuk.26.06.2021,
+ author = {Agontuk},
+ editor = {GitHub},
+ year = {2018},
+ title = {react-native-geolocation-service},
+ url = {https://github.com/Agontuk/react-native-geolocation-service},
+ urldate = {29.07.2021}
+}
+
+
 @misc{Apple.07.06.2021,
  editor = {Apple},
  year = {07.06.2021},
@@ -12,9 +22,10 @@
 @misc{Archibald.2020,
  author = {Archibald, Jake},
  editor = {web.dev},
- year = {2020},
+ year = {2014},
  title = {The Offline Cookbook},
- url = {https://web.dev/offline-cookbook/}
+ url = {https://web.dev/offline-cookbook/},
+ urldate = {28.07.2021}
 }
 
 
@@ -29,10 +40,11 @@
 
 @misc{Barger.2021,
  author = {Barger, Reed},
+ editor = {freeCodeCamp.org},
  year = {2021},
  title = {Is React a Library or a Framework? Here's Why it Matters},
  url = {https://www.freecodecamp.org/news/is-react-a-library-or-a-framework/},
- address = {freeCodeCamp.org}
+ urldate = {15.07.2021}
 }
 
 
@@ -52,7 +64,8 @@
  author = {Beverloo, Peter and {Rayan Kanso}},
  year = {2021},
  title = {Contact Picker API},
- url = {https://wicg.github.io/contact-api/spec/}
+ url = {https://wicg.github.io/contact-api/spec/},
+ urldate = {22.07.2021}
 }
 
 
@@ -95,25 +108,27 @@
  year = {2021},
  title = {Web Application Manifest},
  url = {https://www.w3.org/TR/appmanifest/},
- address = {W3C.org}
+ urldate = {13.07.2021}
 }
 
 
 @misc{Caceres.2021b,
  author = {C{\'a}ceres, Marcos},
- editor = {W3C},
+ editor = {{World Wide Web Consortium}},
  year = {2021},
  title = {Geolocation API},
- url = {https://w3c.github.io/geolocation-api/}
+ url = {https://w3c.github.io/geolocation-api/},
+ urldate = {14.07.2021}
 }
 
 
 @misc{caniuse.com.2021,
  author = {Deveria, Alexis},
  editor = {caniuse.com},
- year = {2021},
+ year = {o.J.},
  title = {Push API},
  url = {https://caniuse.com/push-api},
+ address = {caniuse.com},
  urldate = {14.07.2021}
 }
 
@@ -122,7 +137,19 @@
  editor = {{COVID-19 Datenhub}},
  year = {2020},
  title = {RKI Corona Landkreise},
- url = {https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0/about}
+ url = {https://npgeo-corona-npgeo-de.hub.arcgis.com/datasets/917fc37a709542548cc3be077a786c17_0/about},
+ urldate = {29.07.2021}
+}
+
+
+@misc{Deveria.o.J.,
+ author = {Deveria, Alexis},
+ editor = {caniuse.com},
+ year = {o.J.},
+ title = {Add to home screen (A2HS)},
+ url = {https://caniuse.com/web-app-manifest},
+ address = {caniuse.com},
+ urldate = {29.07.2021}
 }
 
 
@@ -137,40 +164,47 @@
 
 
 @misc{Facebook.,
- author = {Facebook},
- title = {Core Components and Native Components},
- url = {https://reactnative.dev/docs/intro-react-native-components}
+ editor = {{React Native}},
+ year = {o. J.},
+ title = {Core Components and Native Components: 0.64},
+ url = {https://reactnative.dev/docs/intro-react-native-components},
+ urldate = {15.06.2021}
 }
 
 
 @misc{Facebook.2021,
- author = {Facebook},
  editor = {{React Native}},
- year = {2021},
- title = {Geolocation},
- url = {https://reactnative.dev/docs/0.63/geolocation}
+ year = {o. J.},
+ title = {Geolocation: 0.63},
+ url = {https://reactnative.dev/docs/0.63/geolocation},
+ urldate = {30.07.2021}
 }
 
 
 @misc{Facebook.b,
- author = {Facebook},
- title = {Create a New React App},
- url = {https://reactjs.org/docs/create-a-new-react-app.html}
+ editor = {React},
+ year = {2021},
+ title = {Create a New React App: v17.0.2},
+ url = {https://reactjs.org/docs/create-a-new-react-app.html},
+ urldate = {17.07.2021}
 }
 
 
 @misc{Facebook.c,
- author = {Facebook},
+ editor = {Expo},
  title = {Ejecting to ExpoKit},
  url = {https://docs.expo.io/expokit/eject/},
- address = {Online}
+ address = {Online},
+ urldate = {13.07.2021}
 }
 
 
 @misc{Facebook.d,
- author = {Facebook},
- title = {Introducing Hooks},
- url = {https://reactjs.org/docs/hooks-intro.html}
+ editor = {React},
+ year = {2021},
+ title = {Introducing Hooks: v17.0.2},
+ url = {https://reactjs.org/docs/hooks-intro.html},
+ urldate = {17.07.2021}
 }
 
 
@@ -184,8 +218,10 @@
 
 @misc{Facebook.f,
  author = {Facebook},
+ year = {30.07.2021},
  title = {React Native},
- url = {https://github.com/facebook/react-native}
+ url = {https://github.com/facebook/react-native},
+ urldate = {30.07.2021}
 }
 
 
@@ -197,9 +233,11 @@
 
 
 @misc{Facebook.h,
- author = {Facebook},
+ editor = {{React Native}},
+ year = {o. J.},
  title = {Who's using React Native},
- url = {https://reactnative.dev/showcase}
+ url = {https://reactnative.dev/showcase},
+ urldate = {17.07.2021}
 }
 
 
@@ -225,16 +263,29 @@
 }
 
 
+@misc{Gaba.o.J.,
+ author = {Gaba, Rahul and Ramachandran, Atul},
+ editor = {reactnative.guide},
+ year = {o. J.},
+ title = {React Native Internals},
+ url = {https://www.reactnative.guide/3-react-native-internals/3.1-react-native-internals.html},
+ urldate = {12.07.2021}
+}
+
+
 @misc{Gaunt.,
  author = {Gaunt, Matt},
+ editor = {{Google Developers}},
+ year = {o. J.},
  title = {Service Workers: an Introduction},
- url = {https://developers.google.com/web/fundamentals/primers/service-workers}
+ url = {https://developers.google.com/web/fundamentals/primers/service-workers},
+ urldate = {14.07.2021}
 }
 
 
 @misc{GeofencingAPI.2017,
  author = {Kruisselbrink, Marijn},
- editor = {W3C},
+ editor = {{World Wide Web Consortium}},
  year = {2017},
  title = {Geofencing API},
  url = {https://www.w3.org/TR/geofencing/},
@@ -243,8 +294,8 @@
 
 
 @misc{Google.o.J.,
- author = {Google},
- year = {o. J.},
+ editor = {{Google Developers}},
+ year = {2017},
  title = {Twitter Lite PWA Significantly Increases Engagement and Reduces Data Usage},
  url = {https://developers.google.com/web/showcase/2017/twitter},
  urldate = {22.06.2021}
@@ -257,6 +308,7 @@
  title = {Progressive web apps},
  url = {http://proquest.tech.safaribooksonline.de/9781617294587},
  address = {Shelter Island, NY},
+ urldate = {17.07.2021},
  publisher = {{Manning Publications}},
  isbn = {9781617294587}
 }
@@ -266,6 +318,7 @@
  author = {Hyun, Sangwon and Cho, Junsung and Cho, Geumhwan and Kim, Hyoungshick},
  year = {2018},
  title = {Design and Analysis of Push Notification-Based Malware on Android},
+ urldate = {17.07.2021},
  pages = {1--12},
  volume = {2018},
  issn = {1939-0114},
@@ -277,7 +330,8 @@
 
 @misc{Iqbal.06.05.2021,
  author = {Iqbal, Mansoor},
- year = {06.05.2021},
+ editor = {{Business of Apps}},
+ year = {2020},
  title = {App Download and Usage Statistics (2020)},
  url = {https://www.businessofapps.com/data/app-statistics/#2.1},
  urldate = {28.07.2021}
@@ -288,6 +342,7 @@
  author = {Jobe, William},
  year = {2013},
  title = {Native Apps Vs. Mobile Web Apps},
+ urldate = {https://www.businessofapps.com/data/app-statistics/{\#}2.1},
  pages = {27},
  volume = {7},
  number = {4},
@@ -298,15 +353,18 @@
 
 @misc{Lamouri.2020,
  author = {Lamouri, Mounir and C{\'a}ceres, Marcos and Yasskin, Jeffrey},
+ editor = {{World Wide Web Consortium}},
  year = {2020},
  title = {Permissions},
- url = {https://www.w3.org/TR/permissions/}
+ url = {https://www.w3.org/TR/permissions/},
+ urldate = {17.07.2021}
 }
 
 
 @inproceedings{Lee.2018,
  author = {Lee, Jiyeon and Kim, Hayeon and Park, Junghwan and Shin, Insik and Son, Sooel},
  title = {Pride and Prejudice in Progressive Web Apps},
+ urldate = {17.07.2021},
  pages = {1731--1746},
  publisher = {{Association for Computing Machinery}},
  isbn = {9781450356930},
@@ -320,10 +378,11 @@
 
 @misc{LePage.2017,
  author = {LePage, Pete},
- editor = {web.de},
+ editor = {web.dev},
  year = {2017},
  title = {The Cache API: A quick guide: Learn hot to use the Cache API to mak eyour application data available offline.},
- url = {https://web.dev/cache-api-quick-guide/}
+ url = {https://web.dev/cache-api-quick-guide/},
+ urldate = {17.07.2021}
 }
 
 
@@ -332,7 +391,8 @@
  editor = {web.dev},
  year = {2020},
  title = {Storage for the web: There are many different options for storing data in the browser. Which one is best for your needs?},
- url = {https://web.dev/storage-for-the-web/}
+ url = {https://web.dev/storage-for-the-web/},
+ urldate = {17.07.2021}
 }
 
 
@@ -387,15 +447,17 @@
 @misc{MDNcontributors.,
  author = {{MDN contributors}},
  editor = {{MDN Web Docs}},
+ year = {o. J.},
  title = {Progressive web apps (PWAs)},
- url = {https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps}
+ url = {https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps},
+ urldate = {17.07.2021}
 }
 
 
 @misc{MDNcontributors.2021,
  author = {{MDN contributors}},
- editor = {{MDN contributors}},
- year = {2021},
+ editor = {{MDN Web Docs}},
+ year = {o. J.},
  title = {Push API},
  url = {https://developer.mozilla.org/en-US/docs/Web/API/Push_API},
  urldate = {14.07.2021}
@@ -405,7 +467,7 @@
 @misc{MDNcontributors.22.06.2021,
  author = {{MDN contributors}},
  editor = {{MDN Web Docs}},
- year = {22.06.2021},
+ year = {o. J.},
  title = {Contact Picker API},
  url = {https://developer.mozilla.org/en-US/docs/Web/API/Contact_Picker_API},
  urldate = {15.07.2021}
@@ -415,24 +477,30 @@
 @misc{MDNcontributors.b,
  author = {{MDN contributors}},
  editor = {{MDN Web Docs}},
+ year = {o. J.},
  title = {Service Worker API},
- url = {https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API}
+ url = {https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API},
+ urldate = {17.07.2021}
 }
 
 
 @misc{MDNcontributors.c,
  author = {{MDN contributors}},
  editor = {{MDN Web Docs}},
+ year = {o. J.},
  title = {Using Service Workers},
- url = {https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers}
+ url = {https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers},
+ urldate = {17.07.2021}
 }
 
 
 @misc{MDNcontributors.d,
  author = {{MDN contributors}},
  editor = {{MDN Web Docs}},
+ year = {o. J.},
  title = {Web App Manifest},
- url = {https://developer.mozilla.org/de/docs/Web/Manifest}
+ url = {https://developer.mozilla.org/de/docs/Web/Manifest},
+ urldate = {17.07.2021}
 }
 
 
@@ -447,57 +515,39 @@
 
 
 @misc{MozillaWiki.2016,
- author = {{o. V.}},
- year = {2016},
+ editor = {{Mozilla Wiki}},
+ year = {12.01.2016},
  title = {Firefox/ Push Notifications},
  url = {https://wiki.mozilla.org/Firefox/Push_Notifications},
  urldate = {12.07.2021}
 }
 
 
-@misc{o.V..,
- author = {{o. V.}},
- editor = {caniuse.com},
- title = {Add to home screen (A2HS)},
- url = {https://caniuse.com/web-app-manifest},
- address = {caniuse.com}
-}
-
-
 @misc{o.V..2020,
- author = {{o. V.}},
- editor = {https://2020.stateofjs.com/en-US/},
+ author = {Greif, Sacha and Benitte, Rapha{\"e}l},
+ editor = {stateofjs.com},
  year = {2020},
  title = {Mobile and Desktop},
- url = {https://2020.stateofjs.com/en-US/technologies/mobile-desktop/}
+ url = {https://2020.stateofjs.com/en-US/technologies/mobile-desktop/},
+ urldate = {15.06.2021}
 }
 
 
 @misc{o.V..2021,
- author = {{o. V.}},
  editor = {{MDN Web Docs}},
- year = {2021},
+ year = {o. J.},
  title = {BeforeInstallPromptEvent.prompt()},
- url = {https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt}
+ url = {https://developer.mozilla.org/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt},
+ urldate = {17.07.2021}
 }
 
 
 @misc{o.V..2021b,
- author = {StatCounter},
  editor = {StatCounter},
  year = {2021},
  title = {Mobile Operating System Market Share Worldwide: Apr 2010 - Apr 2021},
- url = {https://gs.statcounter.com/os-market-share/mobile/worldwide/#monthly-201004-202104}
-}
-
-
-@misc{o.V..o.J.,
- author = {{o. V.}},
- editor = {reactnative.guide},
- year = {o. J.},
- title = {React Native Internals},
- url = {https://www.reactnative.guide/3-react-native-internals/3.1-react-native-internals.html},
- urldate = {12.07.2021}
+ url = {https://gs.statcounter.com/os-market-share/mobile/worldwide/#monthly-201004-202104},
+ urldate = {28.07.2021}
 }
 
 
@@ -522,25 +572,31 @@
 
 @misc{Richard.,
  author = {Richard, Sam and LePage, Pete},
+ editor = {web.dev},
+ year = {2020},
  title = {What makes a good Progressive Web App?},
- url = {https://web.dev/pwa-checklist/}
+ url = {https://web.dev/pwa-checklist/},
+ urldate = {13.06.2021}
 }
 
 
 @misc{Russell.2015,
  author = {Russell, Alex},
+ editor = {Medium},
  year = {2015},
  title = {Progressive Web Apps: Escaping Tabs Without Losing Our Soul},
- url = {https://medium.com/@slightlylate/progressive-apps-escaping-tabs-without-losing-our-soul-3b93a8561955}
+ url = {https://medium.com/@slightlylate/progressive-apps-escaping-tabs-without-losing-our-soul-3b93a8561955},
+ urldate = {16.07.2021}
 }
 
 
 @misc{Russell.2021,
  author = {Russell, Alex and Song, Jungkee and Archibald, Jake and Kruisselbring, Marijn},
- editor = {W3C},
+ editor = {{World Wide Web Consortium}},
  year = {2021},
  title = {Service Workers Nightly},
- url = {https://w3c.github.io/ServiceWorker/}
+ url = {https://w3c.github.io/ServiceWorker/},
+ urldate = {15.07.2021}
 }
 
 
@@ -557,9 +613,10 @@
 
 
 @misc{StatCounter.2021,
- author = {StatCounter},
+ author = {Johnson, Joseph},
+ editor = {statista},
  year = {2021},
- title = {Percentage of mobile device website traffic worldwide from 1st quarter 2015 to 1st quarter 2021},
+ title = {Global digital population as of January 2021: (in billions)},
  url = {https://www.statista.com/statistics/617136/digital-population-worldwide/},
  urldate = {16.07.2021}
 }
@@ -567,10 +624,11 @@
 
 @misc{Turner.2019,
  author = {Turner, Ryan},
+ editor = {{React Native}},
  year = {2019},
  title = {Releasing React Native 0.59},
  url = {https://reactnative.dev/blog/2019/03/12/releasing-react-native-059},
- address = {React Native Blog}
+ urldate = {20.07.2021}
 }
 
 

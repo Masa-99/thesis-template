@@ -16,10 +16,10 @@ Laut dem Online-Statistikportal \textit{Statcounter} nutzen 4,32 Billionen Mensc
 Aufgrund der Vielzahl der Nutzer und der damit verbundenen enormen Technologiepotentials für die Zukunft lohnt sich der Vergleich von \ac{pwa} und Native App – beides Technologien, die in mobile Endgeräten Anwendungen finden. 
 
 \section{Zielsetzung}
-Im Rahmen dieser Arbeit soll untersucht werden, welche Vor- und Nachteile das Entwickeln einer \ac{pwa} gegenüber einer nativen App bezüglich Funktionalität, Kompatibilität mit verschiedenen Betriebssystemen und Entwicklungsaufwand bietet.
+Im Rahmen dieser Arbeit soll untersucht werden, welche Vor- und Nachteile das Entwickeln einer \ac{pwa} gegenüber einer nativen App bezüglich Funktionalität, Kompatibilität mit verschiedenen Betriebssystemen und Entwicklungsaufwand bietet.\\
 Um beide Verfahren vergleichen zu können, wird für die Entwicklung der Native App das Framework React Native verwendet, da dies - ähnlich zu \acp{pwa} - eine plattformunabhängige Programmierung ermöglicht.
-Diese Besonderheit wurde in bisherigen Arbeiten noch nicht betrachtet.
-Außerdem sollen dabei auch die aktuellen Grenzen von \acp{pwa} aufgezeigt und somit die Frage beantwortet werden, ob \acp{pwa} Native Apps zum jetzigen Zeitpunkt ersetzen können.
+Diese Besonderheit wurde in bisherigen Arbeiten noch nicht betrachtet.\\
+Außerdem sollen dabei auch die aktuellen Chancen von \acp{pwa} aufgezeigt und somit die Frage beantwortet werden, ob \acp{pwa} Native Apps zum jetzigen Zeitpunkt ersetzen können.
 
 \section{Umfeld}
 Das Thema der Arbeit wird in Zusammenarbeit mit dem IT-Consulting Unternehmen OPITZ CONSULTING bearbeitet.

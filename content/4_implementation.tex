@@ -266,9 +266,9 @@ Der Grund dafür ist, dass das Rendern der App nicht abhängig von einer Netzwer
 Dennoch ist es sinnvoll, auch hier eine lokale Speicherung der Corona-Daten vorzunehmen, um diese trotz Offlinebetriebs anzeigen zu können.
 
 Seit React Native Version 0.59 sind einige Komponenten als veraltet deklariert.
-Das betrifft unter anderem \textit{AsyncStorage}\footnote{https://github.com/react-native-async-storage/async-storage} und \textit{NetInfo}\footnote{https://github.com/react-native-netinfo/react-native-netinfo}.
+Das betrifft unter anderem \textit{AsyncStorage}\footnote{\url{https://github.com/react-native-async-storage/async-storage}} und \textit{NetInfo}\footnote{\url{https://github.com/react-native-netinfo/react-native-netinfo}}.
 Sie wurden jedoch nicht entfernt, sondern lediglich aus der Kernbibliothek react-native exkludiert und in jeweils eigene Bibliotheken mit eigenen Verantwortlichen verschoben \cite{Turner.2019}.
-Diese Bibliotheken sind dem GitHub Repository @react-native-community zu finden und benötigen nach der Installation per npm auch das React Native-spezifische \textit{Linkings}\footnote{Ein Prozess bei dem diejenigen nativen Fähigkeiten, die von einer Bibliothek benötigt werden, der Anwendung hinzugefügt werden. Durch diesen zusätzlichen Schritt verringert sich die Größe der Basis Anwendungen, die eventuell keine nativen Funktionalitäten benötigt.}.
+Diese Bibliotheken sind dem GitHub Repository @react-native-community zu finden und benötigen nach der Installation per npm auch das React Native-spezifische \textit{Linkings}\footnote{Ein Prozess, bei dem diejenigen nativen Fähigkeiten, die von einer Bibliothek benötigt werden, der Anwendung hinzugefügt werden. Durch diesen zusätzlichen Schritt verringert sich die Größe der Basis Anwendungen, die eventuell keine nativen Funktionalitäten benötigt.}.
 
 Der \textit{AsyncStorage} legt persistent Daten unverschlüsselt in einem lokalen Speicher ab.
 Der Speicherplatz ist dabei standardmäßig auf 6 MB beschränkt, allerdings kann dieser auch manuell erweitert werden \cite{Behrends.2018}.
@@ -309,11 +309,11 @@ Zur Implementierung dieser Funktionalität wird der Nutzer beim Klicken des \glq
 \end{figure}
 
 Sobald diese erteilt ist, wird die Methode \textit{Navigator.getCurrentPosition()} aufgerufen und deren Rückgabewert -- ein Objekt des Typs \textit{GeolocationPosition} -- einer Variablen zugewiesen.\\
-Über eine kostenfreie Drittanbieter \ac{api} wird durch den Prozess des Reverse Geocachings aus den \textit{location.coords.latitude} und \textit{location.coords.longitude} Daten die Aufenthaltsstadt bestimmt.
+Über eine kostenfreie Drittanbieter \ac{api} wird durch den Prozess des Reverse Geocodings aus den \textit{location.coords.latitude} und \textit{location.coords.longitude} Daten die Aufenthaltsstadt bestimmt.
 Der Wert des \textit{input}-Feldes wird dann auf den ermittelten Landkreis gesetzt und die Liste der Landkreise automatisch nach dieser gefiltert.
 
 \subparagraph{React Native App\\}
-Zur Implementierung des Standortzugriffs in React Native wird die Community Lösung \textit{react-native-geolocation-service}\footnote{https://github.com/Agontuk/react-native-geolocation-service} verwendet, welche nach Aussage des Erstellers für Android und iOS programmiert ist.
+Zur Implementierung des Standortzugriffs in React Native wird die Community Lösung \textit{react-native-geolocation-service}\footnote{\url{https://github.com/Agontuk/react-native-geolocation-service}} verwendet, welche nach Aussage des Erstellers für Android und iOS programmiert ist.
 Diese greift über eine \textit{Bridge} auf diejenigen Schnittstellen zu, die in Android und in iOS verantwortlich für den Standort sind.
 In Android wird speziell wegen eines Timeout-Problems nicht auf die übliche \textit{Geocoder}-Klasse zugegriffen, sondern auf die \textit{FusedLocationProviderClient} \ac{api} des Google Play Services.
 In iOS spricht die \textit{Bridge} den \textit{CLLocationMangager} des \textit{CoreLocation}-Modules an \cite{Agontuk.26.06.2021}.
@@ -326,7 +326,7 @@ Für iOS wird neben dem Aktivieren des Standortzugriffs in XCode keine explizite
 
 Die Abfrage der Erlaubnis erfolgt in der \textit{Search.js} in einem \textit{Effect}, welcher beim Öffnen der Anwendung ausgelöst wird.
 Nach Zustimmung des Anwenders wird per \ac{api}-Anfrage an denselben Drittanbieter wie bei der \ac{pwa} der Name der Stadt aus den Daten über den Längen- und Breitengrad des Standorts des aktuellen Geräts erschlossen.\\
-Hierbei ist zu betonen, dass im Normalfall bei nativen Anwendungen nach der Standortbestimmung auf die betriebssystemintegrierte Reverse Geocoding Funktion (beispielsweise bei Android die Google Maps Geocoding \ac{api}) zurückgegriffen werden könnte.
+Hierbei ist zu betonen, dass im Normalfall bei nativen Anwendungen nach der Standortbestimmung auf die betriebssystemintegrierte Reverse Geocoding Funktion (beispielsweise bei Android die Geocoder \ac{api}) zurückgegriffen werden könnte.
 In dieser Arbeit wird jedoch wegen der dadurch anfallenden Kosten darauf verzichtet.
 
 Der logische Aufbau dieser Funktionalität konnte hier von der React \ac{pwa} übernommen werden, lediglich die Events wurden abgeändert.
@@ -382,7 +382,7 @@ Deshalb wird hier auf die Adresszeile zugegriffen, in der zur Vereinfachung aktu
 Dieser Wert wird nach Bestätigung der Auswahl direkt in das Suchfeld übernommen und die Liste der Landkreise somit nach dieser Stadt gefiltert.
 
 \subparagraph{React Native App\\}
-Bei der React Native App wurde dies mit der Bibliothek \textit{react-native-contacts}\footnote{https://github.com/morenoh149/react-native-contacts} umgesetzt.
+Bei der React Native App wurde dies mit der Bibliothek \textit{react-native-contacts}\footnote{\url{https://github.com/morenoh149/react-native-contacts}} umgesetzt.
 Diese greift in Android auf die \textit{ContactsContract} Klasse und in iOS auf die \textit{CNContact} zu.
 
 Nach der Installation der Bibliothek müssen in der AndroidManifest-Datei erneut eine \textit{uses-permissions} ergänzt werden, in diesem Fall die \textit{android.permission.READ\_""CONTACTS}-Erlaubnis für das Lesen der Kontakte.
@@ -435,7 +435,7 @@ Der Push Service ist Teil eines jeden Browsers zur Verwaltung von Push Benachric
 Jedoch ist festgelegt, dass der Service stets Anfragen in Form des \textit{Web Push Protocols} verarbeiten kann, wodurch für Entwickler die Form des Push Services irrelevant ist.\\
 Die letzte Station behandelt das \textit{Push}-Event auf dem Endgerät, welches die empfangenen Daten verarbeitet und daraus eine Benachrichtigung erzeugt.
 Dies wird von der Notification \ac{api} abgedeckt, welcher Zugriff auf die betriebssystemsspezifischen Benachrichtungsfunktionen besitzt.
-Hierfür wird im Event die Anweisung \textit{self.registration.showNotifica\-tion(title, options)} ausgeführt.
+Hierfür wird im Event die Anweisung \textit{self.registration.showNoti\-fication(title, options)} ausgeführt.
 Der Übergabeparameter \textit{title} ist dabei der Titel der Benachrichtigung und \textit{options} ein Objekt mit einer Vielzahl von Optionen wie der Text der Benachrichtigung, Aktion-Buttons, Icons und Vibrationsanweisungen.%Quelle
 Im Service Worker eine Webanwendung kann auf dieses Event reagiert werden und aus den Informationen, die vom Push Service gesendet werden, eine lokale Benachrichtigung erzeugen.
 Dies ist auch möglich, wenn die \ac{pwa} geschlossen ist, da der Service Worker unabhängig von der Anwendung selbst aktiv ist.
@@ -465,7 +465,7 @@ Bei Android Geräten werden Push Benachrichtigung von dem Google Cloud Messaging
 Native Anwendungen benötigen wie \acp{pwa} eine Internetverbindung zum Empfangen von Push Benachrichtigungen.
 
 Auch bei der React Native Applikation wird zur Vereinfachung des Prozesses das \ac{fcm} von \textit{Firebase} verwendet, zumal es \ac{apn} integriert.
-Dafür wird die Bibliothek \textit{react-native-firebase}\footnote{https://github.com/invertase/react-native-firebase} genutzt, die Push Benachrichtigungen an Android und iOS ermöglicht.
+Dafür wird die Bibliothek \textit{react-native-firebase}\footnote{\url{https://github.com/invertase/react-native-firebase}} genutzt, die Push Benachrichtigungen an Android und iOS ermöglicht.
 In dieser Arbeit wird jedoch nur exemplarisch auf die Einrichtung von \ac{fcm} mit iOS eingegangen.
 Die Native App greift nach erfolgreicher Einrichtung, die wie bei der \ac{pwa} abläuft, auf dieselbe Real Time Database zu wie die \ac{pwa}.
 

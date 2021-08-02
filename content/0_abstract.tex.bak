@@ -1,18 +1,13 @@
 \thispagestyle{empty}
 \section*{Kurzdarstellung}
 \label{sec:kurzdarstellung}
-%Warum ist es wichtig das jetzt zu machen?
-%Worum geht es?
-%Wie bist du vorgegangen?
-%Was sind deine wichtigsten Ergebnisse?
-%Was bedeuten deine Ergebnisse?
-In der vorliegenden Bachelorarbeit wird untersucht, ob und welche Vor- und Nachteile das Entwickeln einer Progressive Web App -- eine Webanwendung, die Funktionalitäten wie Offlinebetrieb und Installation unterstützt -- im Gegensatz zu einer nativen Anwendung bieten. 
-Ferner soll damit die Frage beantwortet werden, ob sie diese ersetzen kann, um die Chancen von Progressive Web Apps zu analysieren.
-Die Besonderheit dabei ist, dass für die Entwicklung der Native App ein plattformunabhängiger Ansatz gewählt wurde, um die Technologien auf eine vergleichbare Ebene zu bringen.\\
+In der vorliegenden Bachelorarbeit wird untersucht, ob und welche Vor- und Nachteile das Entwickeln einer Progressive Web App (PWA) -- eine Webanwendung, die Funktionalitäten wie Offlinebetrieb und Installation unterstützt -- im Gegensatz zu einer Native App bieten. 
+Ferner soll damit die Frage beantwortet werden, ob sie diese ersetzen kann, um die Chancen von PWAs zu beurteilen.
+Um eine Grundlage für den Vergleich zu schaffen, findet hierbei eine plattformunabhängige Entwicklung der Native App statt.\\
 Für den Vergleich wurde auf Basis eines Kriterienkatalogs, bestehend aus Funktionalität, Kompatibilität mit verschiedenen Betriebssystemen und Entwicklungsaufwand, jeweils eine App entwickelt.
-Diese stellt die aktuellen COVID-19 Fallzahlen dar und unterstützt neben dem Offlinebetrieb und der Installation die Funktionen Standortzugriff, Kontaktzugriff und Benachrichtigungen.\\
-Bei den implementierten Funktionalitäten wird deutlich, dass Progressive Web Apps mittlerweile durch eine Vielzahl von modernen Schnittstellen des Webs eine Alternative zu Native Apps darstellen können.
-Dabei ist jedoch eine Schwachstelle von Progressive Web Apps die fehlende Unterstützung einiger Funktionalitäten von iOS.
-Der Entwicklungsaufwand einer Progressive Web App ist geringer als der einer Native App.\\
-Zusammenfassend zeigt das Ergebnis, dass Progressive Web Apps das Potential besitzen, native Anwendungen zu ersetzen.
-Aktuell ist die Technologie jedoch nicht ausreichend ausgereift, dass sie jegliche native Anwendung ersetzen kann und muss somit abhängig von den Anforderungen des Anwendungsfalls betrachtet werden.
+Diese stellt die aktuellen COVID-19 Fallzahlen dar und unterstützt neben der Installation und dem Offlinebetrieb die Funktionen Standortzugriff, Kontaktzugriff und Benachrichtigungen.\\
+Die implementierten Funktionalitäten verdeutlichen, dass PWAs durch moderne Webschnittstellen an Potential gewinnen.
+Vorteile sind dabei die Unabhängigkeit von der Installation der Anwendung und der geringere Entwicklungsaufwand.\\
+Jedoch ist eine entscheidende Schwachstelle von PWAs die fehlende Unterstützung einiger Funktionalitäten auf iOS Geräten.\\
+Zusammenfassend zeigt das Ergebnis, dass PWAs nur bis zu einem gewissen Grad in der Lage sind, nativen Anwendungen zu ersetzen.
+Deshalb muss die Entscheidung für die Entwicklung einer PWA zudem abhängig von den Anforderungen des Anwendungsfalls betrachtet werden.
