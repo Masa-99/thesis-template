@@ -211,14 +211,15 @@
 @misc{Facebook.e,
  author = {Facebook},
  editor = {GitHub},
- title = {React: A declarative, efficient, and flexible JavaScript library for building user interfaces},
- url = {https://github.com/facebook/react}
+ title = {React},
+ url = {https://github.com/facebook/react},
+ urldate = {27.07.2021}
 }
 
 
 @misc{Facebook.f,
  author = {Facebook},
- year = {30.07.2021},
+ editor = {GitHub},
  title = {React Native},
  url = {https://github.com/facebook/react-native},
  urldate = {30.07.2021}
@@ -226,9 +227,11 @@
 
 
 @misc{Facebook.g,
- author = {Facebook},
+ editor = {Facebook},
+ year = {o. J.},
  title = {React Without JSX},
- url = {https://reactjs.org/docs/react-without-jsx.html}
+ url = {https://reactjs.org/docs/react-without-jsx.html},
+ urldate = {24.07.2021}
 }
 
 
@@ -329,11 +332,10 @@
 
 
 @misc{Iqbal.06.05.2021,
- author = {Iqbal, Mansoor},
- editor = {{Business of Apps}},
- year = {2020},
- title = {App Download and Usage Statistics (2020)},
- url = {https://www.businessofapps.com/data/app-statistics/#2.1},
+ editor = {statista},
+ year = {2021},
+ title = {Number of mobile app downloads worldwide from 2016 to 2020: (in billions)},
+ url = {https://www.statista.com/statistics/271644/worldwide-free-and-paid-mobile-app-store-downloads/},
  urldate = {28.07.2021}
 }
 
@@ -544,19 +546,19 @@
 
 @misc{o.V..2021b,
  editor = {StatCounter},
- year = {2021},
- title = {Mobile Operating System Market Share Worldwide: Apr 2010 - Apr 2021},
- url = {https://gs.statcounter.com/os-market-share/mobile/worldwide/#monthly-201004-202104},
+ year = {o. J.},
+ title = {Mobile Operating System Market Share Worldwide: Apr 2010 - July 2021},
+ url = {https://gs.statcounter.com/os-market-share/mobile/worldwide/#monthly-201004-202107},
  urldate = {28.07.2021}
 }
 
 
 @misc{ODea.2021,
- author = {O'Dea, S.},
- editor = {statista},
+ editor = {StatCounter},
  year = {2021},
- title = {Market share of mobile operating systems worldwide 2012-2021},
- url = {https://www.statista.com/statistics/272698/global-market-share-held-by-mobile-operating-systems-since-2009/}
+ title = {Mobile Operating System Market Share Worldwide},
+ url = {https://gs.statcounter.com/os-market-share/mobile/worldwide},
+ urldate = {13.07.2021}
 }
 
 
@@ -651,6 +653,7 @@ Discover how to use React Native in the real world, from scratch. This book show
  year = {2018},
  title = {Practical React Native: Build Two Full Projects and One Full Game using React Native},
  address = {Berkeley, CA},
+ urldate = {15.05.2021},
  publisher = {Apress},
  isbn = {9781484239391},
  doi = {10.1007/978-1-4842-3939-1}
